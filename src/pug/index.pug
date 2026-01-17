@@ -1,0 +1,162 @@
+extend _include/_layout
+
+//- 設定の上書き
+append variables
+  //- Require
+
+  //- Optional
+  - var og_type = "website";
+
+  //- ルート
+  - var root = '';
+  - var root_img = root + "assets/img/";
+  - var root_link  = "";
+
+  //- 変数
+  - var page_type  = "top";
+
+//- CSS追加
+append css
+  link(rel="stylesheet" href=root + "assets/css/top.css")
+
+//- JS追加
+append js
+  script(type="text/javascript" src=root + "assets/js/top.min.js" defer)
+
+//- コンテンツ
+block content
+  section.p-top-fv 
+    .p-top-fv__image 
+      picture 
+        img(src=root_img + "top/fv01.jpg", alt="山の画像" width="1920" height="1186") 
+    h1.p-top-fv__title 
+      picture 
+        img(src=root_img + "top/title-logo.png", alt="MINAMI - ALPS Mirai Foundation" width="970" height="254")
+
+  section.p-top-menu  
+    include ./_include/_component/_menu
+  
+  section.p-top-news 
+    .c-container
+      .p-top-news__wrap
+        h2.p-top-news__title 
+          | お知らせ
+        ul.p-top-news__list 
+          li.p-top-news__item 
+            a(href="") 
+              span.date 2025年7月3日
+              | 大井川源流の碑設置プロジェクト
+          li.p-top-news__item 
+            a(href="") 
+              span.date 2025年2月3日
+              | 【大井川源流の碑設置事業】特設ページ
+          li.p-top-news__item 
+            a(href="") 
+              span.date 2023年3月27日
+              | 移転のお知らせ
+
+  section.p-top-wrap 
+    //- about
+    .p-top-content 
+      .p-top-box.p-top-about#mirai-foundation
+        h2.p-top-box__en
+          span 
+            | ABOUT US
+            
+        .p-top-box__flex 
+          .p-top-box__image 
+            picture 
+              img(src=root_img + "top/item-img01.jpg", alt="山から撮影した写真" width="380" height="262")
+          .p-top-box__message 
+            h3.p-top-box__title
+              | 南アルプスみらい財団とは？
+            p.p-top-box__text 
+              | 静岡県は、南アルプスを訪れる人々を増やしながら自然環境の保全活動の拡充を図り、利活用と保全の好循環を生み出すことで、南アルプスの貴重な自然環境をより良い形で未来に引き継ぐことを目的に、一般財団法人南アルプスみらい財団を令和4年7月に設立しました。
+        ul.p-top-box__list
+          li.p-top-box__item 
+            a(href=root + "mirai-foundation/gaiyou/") 南アルプスみらい財団の概要
+          li.p-top-box__item 
+            a(href=root + "mirai-foundation/aisatsu/") 理事長挨拶
+          li.p-top-box__item 
+            a(href=root + "mirai-foundation/torikumihoushin/") 財団の取組方針
+          li.p-top-box__item 
+            a(href=root + "mirai-foundation/zigyou/") 財団の事業
+        .p-top-about__icon 
+          picture 
+            img(src=root_img + "top/hut-icon01.png", alt="" width="247" height="150")
+
+    //- information
+    .p-top-content 
+      .p-top-box.p-top-information#information
+        h2.p-top-box__en
+          span 
+            | INFORMATION 
+        .p-top-box__flex 
+          .p-top-box__image 
+            picture 
+              img(src=root_img + "top/item-img02.jpg", alt="山から撮影した鳥の写真" width="380" height="262")
+          .p-top-box__message 
+            h3.p-top-box__title
+              | 南アルプスの情報
+            p.p-top-box__text 
+              | 南アルプスみらい財団では、「自然環境を見守る」、「保全活動を促進する」、「知っていただく」、「来ていただく」の4つを取組の柱とし、山岳地域での巡視や調査の他、南アルプスエコパークに含まれる市町での現地活動や南アルプスの持つ魅力の発信等を通じて、自然環境保全の促進や、訪れる方や興味をもつ方の拡大に取り組んでいます。
+        ul.p-top-box__list
+          li.p-top-box__item 
+            a(href=root + "information/ranger-report/") レンジャー活動記録
+          li.p-top-box__item 
+            a(href=root + "information/ranger-spot/") レンジャー立ち寄りスポット
+          li.p-top-box__item 
+            a(href=root + "information/event/") イベント情報
+          li.p-top-box__item 
+            a(href=root + "information/voice/") 登山者・関係者の声
+          li.p-top-box__item 
+            a(href=root + "jigyou/") 財団の活動
+        .p-top-information__icon 
+          picture 
+            img(src=root_img + "top/boots-icon01.png", alt="" width="201" height="137")
+        .p-top-information__icon-02 
+            img(src=root_img + "top/bard-icon01.png", alt="" width="109" height="84")
+
+    //- download
+    .p-top-content 
+      .p-top-box.p-top-download#sozai
+        h2.p-top-box__en
+          span 
+            | DOWNLOAD 
+            
+        .p-top-box__flex 
+          .p-top-box__image 
+            picture 
+              img(src=root_img + "top/item-img03.jpg", alt="森の写真" width="380" height="262")
+          .p-top-box__message 
+            h3.p-top-box__title
+              | 素材閲覧・ダウンロード
+            p.p-top-box__text 
+              | 南アルプスに興味を持っていただき、さらに理解を深めてもらうため、南アルプスみらい財団に関する資料や、南アルプスの風景写真等をご紹介しています。なお、当ページに掲載されている写真素材については、自由にご利用いただくことが可能です。
+        ul.p-top-box__list
+          li.p-top-box__item 
+            a(href=root + "sozai/pamphlet/") 財団パンフレット
+          li.p-top-box__item 
+            a(href=root + "sozai/picture/") 写真素材集
+        .p-top-download__icon 
+          picture 
+            img(src=root_img + "top/rantan-icon01.png", alt="" width="114" height="219")
+        .p-top-download__icon-02 
+            img(src=root_img + "top/bard-icon02.png", alt="" width="120" height="120")
+
+  section.p-top-contact 
+    .p-top-contact__wrap 
+      .p-top-contact__flex 
+        .p-top-contact__message 
+          h2.p-top-contact__title 
+            | 各種お申し込み
+          p.p-top-contact__text
+            | 南アルプスみらい財団会員・ボランティア・寄付金窓口・
+            br
+            | お問い合わせ・イベントの申し込み など
+            br
+            | お申し込みはこちら。
+          .p-top-contact__button 
+            a(href="") お申し込みフォーム
+        .p-top-contact__image 
+          img(src=root_img + "top/bard-img01.png", alt="鳥のイラスト" width="255" height="241")

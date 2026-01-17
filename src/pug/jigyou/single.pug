@@ -1,0 +1,61 @@
+extend ../_include/_layout
+
+//- 設定の上書き
+append variables
+  //- Require
+  - var title = '';
+  - var site_name = '';
+  - var description = '';
+  - var slug = 'under'
+  //- Optional
+  - var root = "../";
+  - var root_img = root + "assets/img/";
+  - var root_img_jigyou = root + "assets/img/jigyou/";
+  - var root_link  = "../";
+
+
+//- コンテンツ
+block content
+  .p-single 
+    .c-container 
+      .p-single-content 
+        ul.p-single-sns 
+          li.p-single-sns__item 
+            a(href="") 
+              .p-single-sns__icon 
+                img(src=root_img + "single/copy-icon01.png", alt="")
+              p.p-single-sns__text 
+                | 印刷する！
+          li.p-single-sns__item 
+            a(href="") 
+              .p-single-sns__icon 
+                img(src=root_img + "single/facebook-icon01.png", alt="")
+              p.p-single-sns__text 
+                | シェアする！
+        
+        h1.p-single-title 
+          | 南アルプスユネスコエコパーク登録10周年記念事業
+
+        .p-single-body           
+          p 
+            strong 大井川源流の碑設置プロジェクト
+            br
+            | 南アルプスユネスコエコパーク静岡地域連携協議会では、2024年に南アルプスがユネスコエコパークに登録されてから10周年を迎えるにあたり、記念となる事業”大井川源流の碑設置プロジェクト”を実施することとしました。
+            br
+            | 具体的には、大井川の流れに関わる多くの皆様に参加を呼びかけ、日々の生活のつながりとしての南アルプスを意識してもらうため、間ノ岳（あいのだけ）直下の湧水箇所に大井川の源流を示す「大井川源流の碑」を設置しました。
+          p 
+            strong 大井川源流の碑設置プロジェクト実施報告書
+            br
+            | プロジェクトの内容を報告書にまとめました。
+          p 
+            a(href="" style="color:#FF00EB;") 大井川源流の碑設置プロジェクト実施報告書（PDF：3,129KB）
+          p 
+            strong 大井川源流の碑、建立の軌跡（動画）
+            br
+            | プロジェクトの様子を動画にまとめました。
+            br
+            | ショートバージョン、ロングバージョン（前編、後編）がございますので、ぜひご覧ください。
+          figure 
+            img(src=root_img+ "single/damy01.jpg", alt="")
+          figure 
+            img(src=root_img+ "single/damy01.jpg", alt="")

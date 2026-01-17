@@ -1,0 +1,35 @@
+@use "../global" as g;
+
+/* ==========================================================================
+  sidebar
+========================================================================== */
+.l-sidebar {
+  position: fixed;
+  top: 40%;
+  right: 80px;
+  width: 190px;
+
+  .l-sidebar-contact {
+    position: relative;
+
+    .l-sidebar-contact__text {
+      position: absolute;
+      left: 50%;
+      bottom: 20px;
+      transform: translateX(-50%);
+      width: 100%;
+      color: g.$col-green_00877B;
+      font-weight: bold;
+      text-align: center;
+      font-size: 2rem;
+    }
+  }
+  .l-sidebar-entry {
+    margin-top: 23px;
+  }
+  .l-sidebar-sns {
+    display: flex;
+    column-gap: 24px;
+    margin-top: 23px;
+  }
+}

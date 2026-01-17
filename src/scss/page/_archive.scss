@@ -1,0 +1,133 @@
+@use "../global" as g;
+
+/* ==========================================================================
+  archive
+========================================================================== */
+.p-archive {
+
+  .p-archive-content {
+    margin-top: 50px;
+    padding: 50px 65px 90px;
+    background-color: #fff;
+  }
+  .p-archive-title {
+    position: relative;
+    color: #fff;
+    font-weight: 600;
+    text-align: center;
+    font-size: g.rem(30px);
+    
+    span {
+      position: relative;
+      display: block;
+      width: 100%;
+      height: 100%;
+      background-color: g.$col-green_00877B;
+      padding: 10px 0;
+      z-index: 3;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-image: url('../img/archive/title-bg_icon01.png');
+      background-size: contain;
+      background-repeat: no-repeat;
+      width: 46px;
+      aspect-ratio: 46/73;
+      z-index: 0;
+    }
+  }
+  .p-archive-box {
+    margin-top: 50px;
+  }
+  .p-archive-text {
+    margin-top: 80px;
+    letter-spacing: 0.002em;
+    line-height: 1.94;
+    font-size: g.rem(18px);
+    
+    &.p-archive-text__strong {
+      text-align: center;
+      font-weight: 600;
+      line-height: 1.75;
+      font-size: g.rem(20px);
+    }
+  }
+  .p-archive-list {
+    margin-top: 70px;
+
+    .p-archive-list__item {
+      display: flex;
+      column-gap: 38px;
+
+      &+.p-archive-list__item {
+        margin-top: 77px;
+      }
+    }
+    .p-archive-list__image {
+      flex: 0 0 321px;
+
+      &.p-archive-list__image-small {
+        padding: 0 30px;
+      }
+    }
+    .p-archive-list__message {
+      flex: 0 1 100%;
+      margin-top: 10px;
+    }
+
+    .p-archive-list__title {
+      display: flex;
+      justify-content: space-between;
+      border-bottom: 1px solid g.$col-green_00877B;
+      padding-bottom: 15px;
+      font-weight: 600;
+      letter-spacing: 0.002em;
+      font-size: g.rem(22px);
+
+      span {
+        font-weight: 300;
+        font-size: g.rem(18px);
+      }
+    }
+    .p-archive-list__text {
+      margin-top: 10px;
+      font-weight: 300;
+      letter-spacing: 0.002em;
+      line-height: 1.75;
+      font-size: g.rem(20px);
+    }
+    .p-archive-list__more {
+      margin-top: 16px;
+      text-align: right;
+
+      a {
+        position: relative;
+        background-color: g.$col-green_00877B;
+        display: inline-flex;
+        align-items: center;
+        min-width: g.rem(165px);
+        padding: 8px 20px;
+        color: #fff;
+        font-weight: bold;
+        font-size: g.rem(16px);
+
+        &::after {
+          content: '';
+          position: absolute;
+          top: 50%;
+          right: 15px;
+          transform: translateY(-50%);
+          background-image: url("../img/cmn/more-arrow01.png");
+          background-size: contain;
+          background-repeat: no-repeat;
+          width: 29px;
+          aspect-ratio: 29/6;
+        }
+      }
+    }
+  }
+}

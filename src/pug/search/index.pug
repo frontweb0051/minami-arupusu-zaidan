@@ -1,0 +1,27 @@
+extend ../_include/_layout
+
+//- 設定の上書き
+append variables
+  //- Require
+  - var title = '';
+  - var site_name = '';
+  - var description = '';
+  - var slug = 'under'
+  //- Optional
+  - var root = "../";
+  - var root_img = root + "assets/img/";
+  - var root_link  = "../";
+
+//- コンテンツ
+block content
+  .p-archive 
+    .c-container 
+      .p-archive-content 
+        h1.p-archive-title 
+          span
+            | 検索結果
+
+        .p-archive-box  
+
+          //- google 検索
+          <div class="gcse-searchresults-only"></div>

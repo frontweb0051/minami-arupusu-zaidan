@@ -1,0 +1,25 @@
+//- 設定読み込み
+include _config
+
+//- 設定の上書き
+block variables
+
+doctype html
+html(lang=lang)
+  head
+    //- head読み込み
+    include _head
+    //- JS読み込み
+    include _js
+
+  body
+  <script async src="https://cse.google.com/cse.js?cx=65e8adbc80447429b">
+  </script>
+    
+    include _page/_header
+    main.l-main
+      //- コンテンツ
+      block content
+
+    //- include _page/_sidebar
+    include _page/_footer

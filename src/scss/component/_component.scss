@@ -1,0 +1,141 @@
+@use "../global" as g;
+
+/* --------------------------------------------------------------------------
+  container
+-------------------------------------------------------------------------- */
+%c-container {
+  display: block;
+  position: relative;
+  margin: 0 auto;
+  width: 100%;
+  height:100%;
+}
+
+.c-container {
+  @extend %c-container;
+
+  max-width:inherit;
+  padding:0 20px;
+
+  @include g.mq(md) {
+    max-width: 1200px + 40;
+    padding:0 20px;
+  }
+}
+
+.c-container-1060px {
+  @extend %c-container;
+
+  @include g.mq(md) {
+    max-width: 1060px + 40;
+    padding: 0 20px;
+  }
+
+  @include g.mq(sm) {
+    padding: 0 20px;
+  }
+}
+
+.c-menu {
+
+  .c-menu-list {
+    display: flex;
+    align-items: center;
+    justify-content: center;    
+    background-color: #fff;
+    border: 3px solid g.$col-green_00877B;
+    border-radius: 30px;
+  }
+  .c-menu-item {
+    position: relative;
+    height: 100%;
+    padding: 0 50px;
+    font-weight: 600;
+    font-size: g.rem(22px);   
+    z-index: 10;
+
+    a {
+      display: flex;
+      align-items: center;
+      height: 100%;   
+      padding: 10px 0;   
+    }
+    
+
+    &+.c-menu-item {
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+        width: 1px;
+        height: 50%;
+        background-color: #000;
+      }
+    }
+    &:nth-child(3) {
+      .c-menu-mega {
+        width: 120%;
+      }
+    }
+    &:nth-child(4) {
+      .c-menu-mega {
+        left: 0;
+      }
+    }
+    &:hover {
+      .c-menu-mega {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+      }
+    }
+  }
+  .c-menu-mega {
+    opacity: 0;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    margin-top: 3px;
+    padding: 10px;
+    transition: all g.$transtion-time;
+    background-color: rgba($color: #fff, $alpha: .7);
+    visibility: hidden;
+    z-index: 9;
+
+    .c-menu-mega__item {
+      position: relative;
+      padding-left: 25px;
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-top: 9px solid transparent;
+        border-bottom: 9px solid transparent;
+        border-left: 16px solid g.$col-green_00877B;
+        border-right: 0;          
+      }
+      &+.c-menu-mega__item {
+        margin-top: 20px;
+      }
+    }
+  }
+}
+
+.c-history_back {
+  margin: 55px 0;
+
+  a {
+    display: block;
+    width: 55px;
+    margin: 0 auto; 
+  }
+}

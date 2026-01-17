@@ -1,0 +1,47 @@
+@use "../global" as g;
+
+/* ==========================================================================
+  torikumi
+========================================================================== */
+.p-torikumi {
+  margin-top: 55px;
+
+  .p-torikumi-flex {
+    display: flex;
+    column-gap: 60px;
+  }
+  .p-torikumi-message {
+    flex: 0 1 100%;
+    font-weight: 600;
+    line-height: 2;
+    font-size: g.rem(22px);
+    
+  }
+  .p-torikumi-image {
+    flex: 0 0 555px;
+    text-align: center;
+    font-weight: 300;
+    font-size: g.rem(18px);
+
+    img {
+      margin-bottom: 20px;
+    }
+  }
+  .p-torikumi-text {
+    margin-top: 60px;
+    font-weight: 300;
+    line-height: 1.75;
+    font-size: g.rem(20px);
+
+    a {
+      display: inline-block;
+      color: g.$col-blue_06C9F7;
+    }
+  }
+  .p-torikumi-list {
+    display: flex;
+    justify-content: space-between;
+    column-gap: 10px;
+    margin-top: 70px;
+  }
+}

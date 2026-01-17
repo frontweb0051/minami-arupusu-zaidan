@@ -1,0 +1,36 @@
+@use "sass:map";
+@use "sass:meta";
+/* ==========================================================================
+  mixin
+========================================================================== */
+
+// break point
+// デフォルトはmdでレイアウト切り替え
+$breakpoints: (
+  'xs': (min-width: 0),
+  'sm': (max-width: 767px),
+  'md': (min-width: 768px),
+  'lg': (min-width: 980px),
+  'xl': (min-width: 1240px),
+  'xxl': (min-width: 1430px),
+  'md_pc': (max-width: 1000px),
+  'header_pc': (max-width: 1230px),
+  'sm_landsc' : (max-width: 768px) and (max-height: 576px),
+  'ie11' :  (min-width: 768px) and (-ms-high-contrast: none)
+) !default;
+
+/* --------------------------------------------------------------------------
+  media query (SP（小）→ PC（大）の順に適用)
+-------------------------------------------------------------------------- */
+@mixin mq($breakpoint) {
+  @if map.has-key($breakpoints, $breakpoint) {
+    @media screen and #{meta.inspect(map.get($breakpoints, $breakpoint))} {
+      @content;
+    }
+  } @else {
+    @error "指定されたブレークポイントは定義されていません。" + "指定できるブレークポイントは次のとおりです。 -> #{map.keys($breakpoints)}";
+  }
+}
+
+
+

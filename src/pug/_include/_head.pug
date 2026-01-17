@@ -1,0 +1,26 @@
+include _ga4
+meta(charset="UTF-8")
+meta(name='viewport' content='width=device-width, initial-scale=1.0')
+
+title #{title}
+
+meta(name="description" content=description)
+meta(name='keywords', content=keywords)
+
+//- OGP
+meta(property="og:title" content=(ogTitle ? ogTitle + " | " + site_name : title))
+meta(property="og:type" content=og_type)
+meta(property="og:image" content=og_url)
+meta(property="og:url" content=site_url + '/' + slug)
+meta(property="og:description" content=description)
+meta(property="og:site_name" content=site_name)
+meta(property="og:locale" content=og_locale)
+
+link(rel="icon" href=root + "assets/img/favicon.ico")
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Noto+Sans+JP:wght@100..900&family=Zen+Maru+Gothic:wght@400;500;700&display=swap" rel="stylesheet">
+
+block css
+  link(rel="stylesheet" href=root + "assets/css/style.css")

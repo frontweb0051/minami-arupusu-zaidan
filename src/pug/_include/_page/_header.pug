@@ -1,0 +1,46 @@
+//- 画像ルート
+- var root_img = root + 'assets/img/';
+
+header.l-header(class=page_type === 'top' ? 'l-header-top' : '')
+  .c-container 
+    .l-header-wrap 
+      .l-header-logo
+        a(href=root)  
+          picture 
+            img(src=root_img + "cmn/header-logo01.png", alt="南アルプスみらい財団" width="163" height="53")
+      .l-header-utility 
+        .l-header-size 
+          p.l-header-size__text 
+            | 文字のサイズ
+          ul.l-header-size__list 
+            li.l-header-size__item.is-small 
+              button
+                img(src=root_img + "cmn/font-size-small.png", alt="小" width="17" height="16")
+            li.l-header-size__item.is-medium  
+              button
+                img(src=root_img + "cmn/font-size-medium.png", alt="中" width="14" height="16")
+            li.l-header-size__item.is-large  
+              button 
+                img(src=root_img + "cmn/font-size-big.png", alt="大" width="16" height="16")
+            
+        .l-header-search 
+          <div class="gcse-searchbox-only"></div>
+        .l-header-search 
+          #tmp_means_secondary
+          #tmp_search
+          form(action="/search/index.html", id="tmp_gsearch", name="tmp_gsearch")
+            .l-header-search__flex 
+              .l-header-search__input
+                <input id="tmp_query" name="q" size="31" title="サイト内検索" type="text" value="" /></p>            
+              .l-header-search__button
+                <input id="tmp_func_sch_btn" name="sa" type="submit" value=""/></p>
+                <p id="tmp_search_hidden">
+                  <input name="cx" type="hidden" value="264bf61be566d44b2" />
+                  <input name="ie" type="hidden" value="UTF-8" />
+                  <input name="cof" type="hidden" value="FORID:9" />
+                </p>
+
+if page_type == "under"
+  .l-header-menu 
+    include ../_component/_menu
+  

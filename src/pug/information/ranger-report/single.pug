@@ -1,0 +1,55 @@
+extend ../../_include/_layout
+
+//- 設定の上書き
+append variables
+  //- Require
+  - var title = '';
+  - var site_name = '';
+  - var description = '';
+  - var slug = 'under'
+  //- Optional
+  - var root = "../../";
+  - var root_img = root + "assets/img/";
+  - var root_img_report = root + "assets/img/information/ranger-report/";
+  - var root_link  = "../";
+
+//- コンテンツ
+block content
+  .p-single 
+    .c-container 
+      .p-single-content 
+        ul.p-single-sns 
+          li.p-single-sns__item 
+            a(href="") 
+              .p-single-sns__icon 
+                img(src=root_img + "single/copy-icon01.png", alt="")
+              p.p-single-sns__text 
+                | 印刷する！
+          li.p-single-sns__item 
+            a(href="") 
+              .p-single-sns__icon 
+                img(src=root_img + "single/facebook-icon01.png", alt="")
+              p.p-single-sns__text 
+                | シェアする！
+        
+        h1.p-single-title 
+          | 防鹿柵養生作業＠聖平       2025年10月20日～24日
+
+        .p-single-body 
+          p 
+            strong 聖平の防鹿柵を養生してきました。  
+
+          p 
+            | 茶臼小屋から約一か月遅れでこちらも養生です。
+            br
+            | 実は前回、シカの生息密度を調査するためにセンサーカメラを仕掛けており、今回はそれらの回収も兼ねていました。
+            br            
+            | 滞在中に降雪があり、富士山とともに南アルプスも約2,500m付近を境に初冠雪したようでした。
+            br
+            | いよいよ冬到来ですね。
+            br
+            | 報告者：梶田レンジャー
+          figure 
+            img(src=root_img_report + "single/img01.jpg", alt="")
+          figure 
+            img(src=root_img_report + "single/img02.jpg", alt="")

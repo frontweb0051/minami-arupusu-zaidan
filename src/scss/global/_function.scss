@@ -1,0 +1,32 @@
+/* ==========================================================================
+	function
+========================================================================== */
+// デフォルトは横375px換算
+@function px2vw($size, $std-width: 390) {
+	$no-unit-size: calc($size / ($size * 0 + 1));
+
+	@return calc(100 / $std-width) * $no-unit-size * 1vw;
+}
+
+// --- 1. 設定値 ---
+$base-ratio: 87.5; // medium
+$scales: (
+  "small": 75,
+  "medium": 87.5,
+  "large": 125
+);
+
+// ブラウザのデフォルトフォントサイズ（通常 16px）
+$browser-default-font-size: 16px;
+
+// --- 2. 関数: px を rem に変換する ---
+// デザイン上のpx値を渡すと、medium(87.5%)を基準とした rem に変換します
+@function rem($px) {
+  @return calc($px / $browser-default-font-size) * 1rem;
+}
+
+// --- 3. 関数: 各モードの割合を計算 ---
+@function get-scale($mode) {
+  $target: map-get($scales, $mode);
+  @return calc($target / $base-ratio) * 100%;
+}

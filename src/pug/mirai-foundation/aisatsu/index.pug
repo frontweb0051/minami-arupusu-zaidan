@@ -1,0 +1,40 @@
+extend ../../_include/_layout
+
+//- 設定の上書き
+append variables
+  //- Require
+  - var title = '';
+  - var site_name = '';
+  - var description = '';
+  - var slug = 'under'
+  //- Optional
+  - var root = "../../";
+  - var root_img = root + "assets/img/";
+  - var root_img_aisatsu = root + "assets/img/mirai-foundation/aisatsu/";
+  - var root_link  = "../";
+
+//- コンテンツ
+block content
+  .p-archive 
+    .c-container 
+      .p-archive-content 
+        h1.p-archive-title 
+          span
+            | 理事長あいさつ
+        .p-aisatsu 
+          .p-aisatsu-photo 
+            img(src=root_img_aisatsu + "photo01.jpg", alt="理事長　戸野谷　宏の写真" width="458" height="488")
+          p.p-aisatsu-text 
+            | 南アルプスは、生態系の保全と持続可能な利活用の調和を目的として2014年にユネスコエコパークに認定されました。
+            br
+            br
+            | 一般財団法人南アルプスみらい財団は、このユネスコエコパークの理念に則り、南アルプスを訪れる人々を増やしながら自然環境の保全活動の拡充を図り、利活用と保全の好循環を生み出すことで、南アルプスの貴重な自然環境をより良い形で未来に引き継ぐことを目的とし、2022年7月に設立されました。
+            br
+            br
+            | 当財団としましては、富士山を臨む眺望や、世界の南限とされる貴重な生態系など様々な魅力を有するこの南アルプスを地域の資源として活用し、自然環境の保全を図りながら地域活性化につなげられるよう、地域の皆様とも連携して取り組んでまいります。
+          p.p-aisatsu-name 
+            | 一般財団法人南アルプスみらい財団
+            br
+            span 理事長　戸野谷　宏
+
+

@@ -1,0 +1,43 @@
+{
+  "scripts": {
+    "start": "docker-compose up -d",
+    "stop": "docker-compose down",
+    "open": "open http://localhost:8080",
+    "install": "docker-compose run --rm cli /bin/bash /tmp/scripts/wp_install.sh",
+    "plugin_install": "docker-compose run --rm cli /bin/bash /tmp/scripts/wp_plugin_install.sh",
+    "wp": "docker-compose run --rm cli wp",
+    "export": "docker-compose run --rm cli wp db export",
+    "replace": "docker-compose run --rm cli wp search-replace",
+    "install_deploy_tool": "gem install wordmove",
+    "update_deploy_tool": "gem update wordmove",
+    "envv": "echo ${WORDPRESS_PORT}",
+    "dev": "gulp default",
+    "watch": "gulp watch",
+    "build": "gulp build",
+    "lint:style": "stylelint 'src/**/*.(scss|css)' --fix"
+  },
+  "devDependencies": {
+    "@babel/preset-env": "^7.20.2",
+    "autoprefixer": "^10.4.14",
+    "browser-sync": "^2.28.3",
+    "del": "^6.1.1",
+    "gulp": "^4.0.2",
+    "gulp-babel": "^8.0.0",
+    "gulp-debug": "^4.0.0",
+    "gulp-html-beautify": "^1.0.1",
+    "gulp-notify": "^4.0.0",
+    "gulp-plumber": "^1.2.1",
+    "gulp-postcss": "^9.0.1",
+    "gulp-pug": "^5.0.0",
+    "gulp-rename": "^2.0.0",
+    "gulp-sass": "^5.1.0",
+    "gulp-uglify": "^3.0.2",
+    "postcss-clean": "^1.2.2",
+    "postcss-flexbugs-fixes": "^5.0.2",
+    "prettier": "^3.4.2",
+    "sass": "^1.58.3",
+    "stylelint": "^16.12.0",
+    "stylelint-config-standard": "36.0.1",
+    "stylelint-config-standard-scss": "^14.0.0"
+  }
+}

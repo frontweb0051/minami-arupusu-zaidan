@@ -1,0 +1,65 @@
+extend ../../_include/_layout
+
+//- 設定の上書き
+append variables
+  //- Require
+  - var title = '';
+  - var site_name = '';
+  - var description = '';
+  - var slug = 'under'
+  //- Optional
+  - var root = "../../";
+  - var root_img = root + "assets/img/";
+  - var root_img_voice = root + "assets/img/information/voice/";
+  - var root_link  = "../";
+
+//- コンテンツ
+block content
+  .p-single 
+    .c-container 
+      .p-single-content 
+        ul.p-single-sns 
+          li.p-single-sns__item 
+            a(href="") 
+              .p-single-sns__icon 
+                img(src=root_img + "single/copy-icon01.png", alt="")
+              p.p-single-sns__text 
+                | 印刷する！
+          li.p-single-sns__item 
+            a(href="") 
+              .p-single-sns__icon 
+                img(src=root_img + "single/facebook-icon01.png", alt="")
+              p.p-single-sns__text 
+                | シェアする！
+        
+        h1.p-single-title 
+          | 茶臼小屋_名倉健児さん
+
+        .p-single-body    
+          p 
+            strong
+              | インタビュー～2023夏山シーズンを迎えるにあたり～
+          p 
+            | 2023年夏山シーズンのスタートにあたり、静岡県警山岳救助隊にて、長く南アルプスでの遭難救助活動に携わり、退職後、茶臼小屋の管理人になられた、名倉健児さんのお話を伺いました。
+          p 
+            strong(style="color:#118F9D;")
+              | Q：畑薙ダムから茶臼岳ルートの見所を教えてください。
+          p 
+            | A：茶臼岳は、標高2,406mで、南アルプスの中では低い山の部類に入りますが、北に聖岳、南に光岳と、南アルプスの山々を眺望するには、第1級の山になるので、ぜひ皆さんに登ってもらいたいです。
+          p 
+            strong(style="color:#118F9D;")
+              | Q：山小屋の管理人さんのやりがいを教えてください。
+          p 
+            | A：県警救助隊時代に感じた山小屋の安心感、安堵感を求めて小屋番になろうと思いました。お客さんに「茶臼小屋に泊まってよかった」と言って帰っていただけることが一番うれしいです。
+          p 
+            strong(style="color:#118F9D;")
+              | Q：夏山シーズンを迎えますが、茶臼小屋を訪れる登山者の皆さんに一言おねがいします。
+          p 
+            | A：茶臼岳は、(静岡県から登る)南アルプスの中ではアプローチが良く、初心者でも比較的登りやすい山です。一方で、沢沿いのトラバース道が多く、緊張を強いられる場面もあり、また、南アルプスの中でも屈指の急登です。急な登りも登山の楽しみの一つと思っていただいて、それをクリアすれば素晴らしい眺望が待っていますので、皆様ぜひ登ってきてください。茶臼小屋にて、皆さんのお越しをお待ちしております！
+          p 
+            | 【取材：令和5年6月29日、野竹R・栗島R】
+          figure 
+            img(src=root_img_voice + "single/img01.jpg", alt="")
+          figure 
+            img(src=root_img_voice + "single/img02.jpg", alt="")
+          

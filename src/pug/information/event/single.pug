@@ -1,0 +1,99 @@
+extend ../../_include/_layout
+
+//- 設定の上書き
+append variables
+  //- Require
+  - var title = '';
+  - var site_name = '';
+  - var description = '';
+  - var slug = 'under'
+  //- Optional
+  - var root = "../../";
+  - var root_img = root + "assets/img/";
+  - var root_img_event = root + "assets/img/information/event/";
+  - var root_link  = "../";
+
+//- コンテンツ
+block content
+  .p-single 
+    .c-container 
+      .p-single-content 
+        ul.p-single-sns 
+          li.p-single-sns__item 
+            a(href="") 
+              .p-single-sns__icon 
+                img(src=root_img + "single/copy-icon01.png", alt="")
+              p.p-single-sns__text 
+                | 印刷する！
+          li.p-single-sns__item 
+            a(href="") 
+              .p-single-sns__icon 
+                img(src=root_img + "single/facebook-icon01.png", alt="")
+              p.p-single-sns__text 
+                | シェアする！
+        
+        h1.p-single-title 
+          | 防鹿柵養生作業＠聖平       2025年10月20日～24日
+
+        .p-single-body    
+          figure(style="text-align:center;") 
+            img(src=root_img_event + "single/poster01.png",style="width:327px;" alt="")       
+          p 
+            strong(style="color:#118F9D;")
+              | 大井川源流の碑が完成しました！
+              br
+              | たくさんのご協力ありがとうございます！
+              br
+              | 完成報告会で上映した取組の紹介動画がYouTubeで視聴できるようになりました！
+          p 
+            a(href="" style="color:#FF00EB;") 動画はコチラから→YouTube（外部サイトへリンク）
+          p 
+            | 南アルプスユネスコエコパーク静岡地域連携協議会では、南アルプスがユネスコエコパークに登録されて10周年を迎える2024年に、大井川源流である間ノ岳に「源流の碑」を設置します。
+            br
+            | 南アルプス、大井川、そして駿河湾にまで至る自然の恵みに心を寄せる、とても貴重なこの機会に、多くの皆様のご理解とご協力をお願い申し上げます。
+          p 
+            strong 1.大井川源流の碑制作
+            br
+            | 現地を訪れる登山者へのPRになり、積雪等の多い南アルプスの山岳地域環境での設置にも耐え得る石碑を制作します。
+          p 
+            strong 2.海から山まで　大井川を歩いてつなぐ！　石碑徒歩リレー
+            br
+            | 石碑の「銘板」を背負って、大井川河口から椹島まで徒歩でリレーします。
+            br
+            | 椹島から源流部の間ノ岳までは登山に精通したチームが運搬します。
+          p 
+            a(href="#" style="color:#06C9F7;") 詳しくはこちら
+          p 
+            strong 3.源流を目指してボッカティア（ボランティア×歩荷）！
+            br
+            | 登山熟練者のボランティア（36名）が、石碑を11分割して源流部まで運搬し、現地で碑の部材を組み立てて設置します。
+          p 
+            | ≪募集を延長しました。≫　　　
+            a(href="" style="color:#06C9F7;") 詳しくはこちら
+          p   
+            strong 4.大井川源流の碑　現地（間ノ岳）除幕式
+            br
+            | 現地（間ノ岳直下）で石碑の除幕式を実施します。
+          p 
+            strong 5.南アルプスと大井川の豊かな恵みを伝える　大井川源流の碑紹介看板お披露目式
+            br
+            | 当事業の紹介や、協力された方のお名前（個人名・団体名・社名）等を掲載した看板を静岡県側の登山拠点である椹島に設置します。
+            br
+            | 8月11日の山の日に、当事業の記録映像の上映や赤石太鼓の演奏、井川神楽奉納等を含めたお披露目式を実施します。
+          p 
+            strong 6.その他（協賛等）　【締め切りました。たくさんの御協賛ありがとうございました】
+            br
+            | 南アルプスユネスコエコパーク静岡地域連携協議会では、大井川源流の碑設置事業の趣旨に賛同し、協賛いただける個人・企業・団体を募集しています。協賛金は、源流の碑の制作や設置、広報活動、事業運営などに幅広く活用させていただきます。
+          p 
+            a(href="" style="color:#06C9F7;") 詳しくはこちら（PDF：2,504KB）
+          p 
+            a(href="" style="color:#FF00EB;") 協賛申込書（PDF：85KB）
+          p 
+            a(href="" style="color:#FF00EB;") 協賛申込書（ワード：23KB）
+          p 
+            strong 7　大井川源流の碑完成報告会の開催
+            br
+            | 大井川源流の碑完成を記念して、完成報告会を開催しました。
+          p 
+            a(href="" style="color:#06C9F7;") 詳細はこちら（PDF：2,928KB）
+            | をご覧ください。

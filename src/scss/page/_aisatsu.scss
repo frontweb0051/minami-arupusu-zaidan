@@ -1,0 +1,31 @@
+@use "../global" as g;
+
+/* ==========================================================================
+  asisatsu
+========================================================================== */
+.p-aisatsu {
+  margin-top: 40px;
+
+  .p-aisatsu-photo {
+    max-width: 458px;
+  }
+  .p-aisatsu-text {
+    margin-top: 56px;
+    font-weight: 300;
+    line-height: 1.75;
+    font-size: g.rem(20px);
+  }
+  .p-aisatsu-name {
+    margin-top: 43px;
+    text-align: right;
+    font-weight: 400;
+    font-size: g.rem(20px);
+
+    span {
+      display: block;
+      margin-top: 20px;
+      font-weight: 600;
+      font-size: g.rem(22px);
+    }
+  }
+}

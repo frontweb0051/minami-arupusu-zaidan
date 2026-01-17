@@ -1,0 +1,47 @@
+//- 画像ルート
+
+- var root_img = root + 'assets/img/';
+- var root_img_footer = root + "assets/img/common/footer";
+
+if page_type == 'under'
+  include ../_component/_history-back
+
+footer.l-footer
+  ul.l-footer-links 
+    li.l-footer-links__item 
+      a(href="") このサイトについて
+    li.l-footer-links__item 
+      a(href="") サイトマップ
+    li.l-footer-links__item 
+      a(href="") 個人情報の取り扱い
+    li.l-footer-links__item 
+      a(href="") リンク集
+  .l-footer-wrap 
+    .c-container-1060px 
+      .l-footer-content
+        .l-footer-flex
+          .l-footer-logo 
+            img(src=root_img + "cmn/footer-logo01.png", alt="南アルプスみらい財団" width="266" height="101")
+          .l-footer-box 
+            p.l-footer-box__text 
+              | 一般財団法人 南アルプスみらい財団
+              span Minami-Alps Mirai Foundation
+            .l-footer-contact 
+              dl 
+                dt 法人番号：
+                dd 9080005007470
+              dl 
+                dt 本所：
+                dd 〒422-8017 静岡市駿河区大谷5762ふじのくに地球環境史ミュージアム3階
+              dl 
+                dt 出先：
+                dd 〒420-8061 静岡市葵区田代 静岡市南アルプス自然ふれあいセンター内
+              dl 
+                dt 電話番号：
+                dd 054-238-2270　（ファクス番号:054-238-2275）
+              dl 
+                dt お問い合わせ時間：
+                dd 平日 8時30分から17時15分まで（土曜日・日曜日・祝日 休業）
+        p.l-footer-copy 
+          | Copyright © Minami-Alps Mirai Foundation. All Rights Reserved.
+

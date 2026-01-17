@@ -1,0 +1,15 @@
+@charset "UTF-8";
+@use 'foundation';
+@use 'utility/utility';
+@use 'component/component';
+@use 'layout';
+
+// page
+@use 'page/top';
+@use 'page/archive';
+@use 'page/single';
+@use 'page/gaiyou';
+@use 'page/torikumi';
+@use 'page/aisatsu';
+@use 'page/jigyou';
+@use 'page/picture';

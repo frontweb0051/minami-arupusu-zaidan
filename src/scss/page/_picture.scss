@@ -1,0 +1,68 @@
+@use "../global" as g;
+
+/* ==========================================================================
+  picture
+========================================================================== */
+.p-picture {
+  margin-top: 55px;
+
+  .p-picture-content {
+    &+.p-picture-content {
+      margin-top: 145px;
+    }
+  }
+  
+  .p-picture-logo {
+    width: 242px;
+    margin: 0 auto;
+  }
+  .p-picture-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 135px 25px;
+    margin-top: 30px;
+
+    .p-picture-list__item {
+      width: calc((100% - 50px)/3);
+    }
+    .p-picture-list__name {
+      text-align: center;
+      font-size: g.rem(20px);
+    }
+    .p-picture-list__image {
+      margin-top: 15px;
+    }
+    .p-picture-list__download {
+      width: g.rem(165px);
+      height: 26px;
+      margin: 15px auto 0 ;
+
+      a { 
+        position: relative;
+        display: flex;
+        align-items: center;        
+        width: 100%;
+        height: 100%;
+        padding-left: 15px;
+        color: #fff;
+        background-color: g.$col-green_118F9D;
+        font-family: g.$font-zen;
+        font-weight: 500;
+        font-size: g.rem(16px);
+
+        &::after {
+          content: '';
+          position: absolute;
+          top: 50%;
+          right: 15px;
+          transform: translateY(-50%);
+          background-image: url("../img/cmn/more-arrow01.png");
+          background-size: contain;
+          background-repeat: no-repeat;
+          width: 29px;
+          aspect-ratio: 29/6;
+        }        
+      }
+    }
+  }
+}

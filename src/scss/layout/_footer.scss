@@ -1,0 +1,121 @@
+@use "../global" as g;
+
+/* ==========================================================================
+  footer
+========================================================================== */
+.l-footer {
+
+  .l-footer-links {
+    display: flex;
+    justify-content: center;
+    column-gap: 80px;
+    margin-bottom: 84px;
+
+    .l-footer-links__item {
+      position: relative;
+      font-weight: 600;
+      font-size: g.rem(22px);
+
+      a {
+        display: block;
+        padding-left: 20px;
+
+        &::before {
+          content: '';
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          left: 0;
+          width: 0;
+          height: 0;
+          border-style: solid;
+          border-top: 9px solid transparent;
+          border-bottom: 9px solid transparent;
+          border-left: 16px solid g.$col-green_00877B;
+          border-right: 0;                  
+        }
+      }
+
+    }
+  }
+
+
+  .l-footer-wrap {
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    padding-bottom: 50px;
+    height: 708px;
+    overflow: hidden;
+
+    @media screen and (min-width:767px) and (max-width:1200px) {
+      // height: auto;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      background-image: url("../img/cmn/footer-bg01.png");
+      background-size: contain;
+      background-repeat: no-repeat;
+      aspect-ratio: 3840/1406;      
+      background-position: center bottom;
+      width: 1920px;
+      height: 708px;
+      z-index: -1;
+    }
+  }
+  .l-footer-content {  
+    position: absolute;  
+    bottom: 0;
+  }
+  .l-footer-flex {    
+    display: flex;
+    align-items: baseline;
+    column-gap: 56px;    
+  }
+  .l-footer-logo {
+    flex: 0 0 266px;
+  }
+  .l-footer-box {
+
+    .l-footer-box__text {
+      color: #fff;
+      font-weight: 600;
+      font-size: g.rem(23px);
+      
+      span {
+        display: block;
+        margin-top: 10px;
+        font-weight: 300;
+        font-size: g.rem(20px);
+      }
+    }
+
+    .l-footer-contact {
+      margin-top: 30px;
+
+      dl {
+        display: flex;
+        color: #fff;        
+        line-height: 1.5;
+        font-size: g.rem(20px);
+
+      
+        dt {
+          font-weight: 400;
+        }
+      }
+    }
+  }
+  .l-footer-copy {
+    padding-top: 56px;
+    color: #fff;
+    text-align: center;
+    font-weight: 300;
+    font-size: g.rem(20px);
+  }
+}

@@ -1,0 +1,51 @@
+@use "../global" as g;
+
+/* ==========================================================================
+  jigyou
+========================================================================== */
+.p-jigyou {
+  
+  .p-jigyou-content {
+    margin-top: 70px;
+  }
+  .p-jigyou-box {
+
+    &+.p-jigyou-box {
+      margin-top: 100px;
+    }
+    .p-jigyou-box__title {
+      padding-bottom: 15px;
+      border-bottom: 3px solid g.$col-green_00877B;
+      color: g.$col-green_00877B;
+      font-weight: 600;
+      text-align: center;
+      font-size: g.rem(22px);
+    }
+    .p-jigyou-box__flex {
+      display: flex;
+      column-gap: 28px;
+      margin-top: 33px;
+    }
+    .p-jigyou-box__image {
+      flex: 0 0 513px;
+    }
+    .p-jigyou-box__message {
+      flex: 0 1 100%;
+
+      dl {
+        dt {
+          font-weight: 600;
+          line-height: 1.75;
+          font-size: g.rem(20px);
+        }
+        dd {
+          line-height: 1.94;
+          font-size: g.rem(18px);
+        }
+        &+dl {
+          margin-top: 30px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,182 @@
+extend ../../_include/_layout
+
+//- 設定の上書き
+append variables
+  //- Require
+  - var title = '';
+  - var site_name = '';
+  - var description = '';
+  - var slug = 'under'
+  //- Optional
+  - var root = "../../";
+  - var root_img = root + "assets/img/";
+  - var root_img_picture = root + "assets/img/sozai/picture/";
+  - var root_link  = "../";
+
+//- コンテンツ
+block content
+  .p-archive 
+    .c-container 
+      .p-archive-content 
+        h1.p-archive-title 
+          span
+            | 写真素材集
+
+        .p-picture 
+          .p-picture-wrap 
+
+            //- Spring
+            .p-picture-content 
+              .p-picture-logo 
+                img(src=root_img_picture + "spring-logo.png", alt="spring" width="242" height="88")
+              ul.p-picture-list 
+                //- ハクサンイチゲ
+                li.p-picture-list__item 
+                  p.p-picture-list__name 
+                    | ハクサンイチゲ
+                  .p-picture-list__image 
+                    img(src=root_img_picture + "spring-img01.jpg", alt="ハクサンイチゲの写真")
+                  .p-picture-list__download 
+                    a(href="") Download
+
+                //- ミヤマキンバイ
+                li.p-picture-list__item 
+                  p.p-picture-list__name 
+                    | ミヤマキンバイ
+                  .p-picture-list__image 
+                    img(src=root_img_picture + "spring-img02.jpg", alt="ミヤマキンバイの写真")
+                  .p-picture-list__download 
+                    a(href="") Download
+
+                //- コメバツガザクラ
+                li.p-picture-list__item 
+                  p.p-picture-list__name 
+                    | コメバツガザクラ
+                  .p-picture-list__image 
+                    img(src=root_img_picture + "spring-img03.jpg", alt="コメバツガザクラの写真")
+                  .p-picture-list__download 
+                    a(href="") Download
+
+                //- 荒川小屋
+                li.p-picture-list__item 
+                  p.p-picture-list__name 
+                    | 荒川小屋
+                  .p-picture-list__image 
+                    img(src=root_img_picture + "spring-img04.jpg", alt="荒川小屋の写真")
+                  .p-picture-list__download 
+                    a(href="") Download
+
+                //- ミヤマキンバイと赤石小屋
+                li.p-picture-list__item 
+                  p.p-picture-list__name 
+                    | ミヤマキンバイと赤石小屋
+                  .p-picture-list__image 
+                    img(src=root_img_picture + "spring-img05.jpg", alt="ミヤマキンバイと赤石小屋の写真")
+                  .p-picture-list__download 
+                    a(href="") Download
+
+            //- Summer
+            .p-picture-content 
+              .p-picture-logo 
+                img(src=root_img_picture + "summer-logo.png", alt="summer" width="242" height="88")
+              ul.p-picture-list 
+                //- 夏の荒川・赤石・聖の雄姿
+                li.p-picture-list__item 
+                  p.p-picture-list__name 
+                    | 夏の荒川・赤石・聖の雄姿
+                  .p-picture-list__image 
+                    img(src=root_img_picture + "summer-img01.jpg", alt="夏の荒川・赤石・聖の雄姿の写真")
+                  .p-picture-list__download 
+                    a(href="") Download
+
+                //- 赤石岳からの朝景
+                li.p-picture-list__item 
+                  p.p-picture-list__name 
+                    | 赤石岳からの朝景
+                  .p-picture-list__image 
+                    img(src=root_img_picture + "summer-img02.jpg", alt="赤石岳からの朝景の写真")
+                  .p-picture-list__download 
+                    a(href="") Download
+
+                //- 南アルプスの主峰赤石
+                li.p-picture-list__item 
+                  p.p-picture-list__name 
+                    | 南アルプスの主峰赤石
+                  .p-picture-list__image 
+                    img(src=root_img_picture + "summer-img03.jpg", alt="南アルプスの主峰赤石の写真")
+                  .p-picture-list__download 
+                    a(href="") Download
+
+            //- autume
+            .p-picture-content 
+              .p-picture-logo 
+                img(src=root_img_picture + "autume-logo.png", alt="autume" width="242" height="88")
+              ul.p-picture-list 
+                //- 紅葉の畑薙橋
+                li.p-picture-list__item 
+                  p.p-picture-list__name 
+                    | 紅葉の畑薙橋
+                  .p-picture-list__image 
+                    img(src=root_img_picture + "autume-img01.jpg", alt="紅葉の畑薙橋の写真")
+                  .p-picture-list__download 
+                    a(href="") Download
+
+                //- 牛首峠
+                li.p-picture-list__item 
+                  p.p-picture-list__name 
+                    | 牛首峠
+                  .p-picture-list__image 
+                    img(src=root_img_picture + "autume-img02.jpg", alt="牛首峠の写真")
+                  .p-picture-list__download 
+                    a(href="") Download
+
+                //- 田代ダム
+                li.p-picture-list__item 
+                  p.p-picture-list__name 
+                    | 田代ダム
+                  .p-picture-list__image 
+                    img(src=root_img_picture + "autume-img03.jpg", alt="田代ダムの写真")
+                  .p-picture-list__download 
+                    a(href="") Download
+                    
+                //- 燕のカラマツ並木
+                li.p-picture-list__item 
+                  p.p-picture-list__name 
+                    | 燕のカラマツ並木
+                  .p-picture-list__image 
+                    img(src=root_img_picture + "autume-img03.jpg", alt="燕のカラマツ並木の写真")
+                  .p-picture-list__download 
+                    a(href="") Download
+
+            //- winter
+            .p-picture-content 
+              .p-picture-logo 
+                img(src=root_img_picture + "winter-logo.png", alt="winter" width="242" height="88")
+              ul.p-picture-list 
+                //- 雪の聖岳
+                li.p-picture-list__item 
+                  p.p-picture-list__name 
+                    | 雪の聖岳
+                  .p-picture-list__image 
+                    img(src=root_img_picture + "winter-img01.jpg", alt="雪の聖岳の写真")
+                  .p-picture-list__download 
+                    a(href="") Download
+
+                //- 雪の茶臼岳
+                li.p-picture-list__item 
+                  p.p-picture-list__name 
+                    | 雪の茶臼岳
+                  .p-picture-list__image 
+                    img(src=root_img_picture + "winter-img02.jpg", alt="雪の茶臼岳の写真")
+                  .p-picture-list__download 
+                    a(href="") Download
+
+                //- 山伏岳からの南アルプス
+                li.p-picture-list__item 
+                  p.p-picture-list__name 
+                    | 山伏岳からの南アルプス
+                  .p-picture-list__image 
+                    img(src=root_img_picture + "winter-img03.jpg", alt="山伏岳からの南アルプスの写真")
+                  .p-picture-list__download 
+                    a(href="") Download
+                    

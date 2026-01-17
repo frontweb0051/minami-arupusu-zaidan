@@ -1,0 +1,52 @@
+extend ../_include/_layout
+
+//- 設定の上書き
+append variables
+  //- Require
+  - var title = '';
+  - var site_name = '';
+  - var description = '';
+  - var slug = 'under'
+  //- Optional
+  - var root = "../";
+  - var root_img = root + "assets/img/";
+  - var root_img_jigyou = root + "assets/img/jigyou/";
+  - var root_link  = "../";
+
+//- コンテンツ
+block content
+  .p-archive 
+    .c-container 
+      .p-archive-content 
+        h1.p-archive-title 
+          span
+            | 財団の活動
+        p.p-archive-text.p-archive-text__strong
+          | 南アルプスみらい財団レンジャーが活動の際に立ち寄るスポットを紹介するコーナー
+        ul.p-archive-list 
+
+          //- 南アルプスユネスコエコパーク登録10周年記念事業
+          li.p-archive-list__item 
+            .p-archive-list__image 
+              img(src=root_img_jigyou + "img01.jpg", alt="写真：南アルプスユネスコエコパーク登録10周年記念事業")
+            .p-archive-list__message 
+              h3.p-archive-list__title 
+                | 南アルプスユネスコエコパーク登録10周年記念事業
+                span 更新日:2025.12.20
+              p.p-archive-list__text 
+                | このページは「財団の活動」の一覧ページになります。このページは「財団の活動」の一覧ページになります。このページは「財団の活動」の一覧ページになります。このページは「財団の活動」の一覧ページになります。
+              .p-archive-list__more 
+                a(href="./single.html") read more
+
+          //- 財団の活動
+          li.p-archive-list__item 
+            .p-archive-list__image 
+              img(src=root_img_jigyou + "img02.jpg", alt="写真：財団の活動")
+            .p-archive-list__message 
+              h3.p-archive-list__title 
+                | 財団の活動
+                span 更新日:2025.12.20
+              p.p-archive-list__text 
+                | このページは「財団の活動」の一覧ページになります。このページは「財団の活動」の一覧ページになります。このページは「財団の活動」の一覧ページになります。このページは「財団の活動」の一覧ページになります。
+              .p-archive-list__more 
+                a(href="./single.html") read more

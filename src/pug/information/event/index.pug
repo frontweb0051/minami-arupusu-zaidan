@@ -1,0 +1,49 @@
+extend ../../_include/_layout
+
+//- 設定の上書き
+append variables
+  //- Require
+  - var title = '';
+  - var site_name = '';
+  - var description = '';
+  - var slug = 'under'
+  //- Optional
+  - var root = "../../";
+  - var root_img = root + "assets/img/";
+  - var root_img_event = root + "assets/img/information/event/";
+  - var root_link  = "../";
+
+//- コンテンツ
+block content
+  .p-archive 
+    .c-container 
+      .p-archive-content 
+        h1.p-archive-title 
+          span
+            | イベント情報
+        p.p-archive-text.p-archive-strong
+          | 南アルプスみらい財団の活動に関わるイベント情報を紹介するコーナーです
+        ul.p-archive-list 
+          li.p-archive-list__item 
+            .p-archive-list__image 
+              img(src=root_img_event + "img01.jpg", alt="写真：大井川源流の碑設置事業")
+            .p-archive-list__message 
+              h3.p-archive-list__title 
+                | 大井川源流の碑設置事業
+                span 更新日:2025.12.20
+              p.p-archive-list__text 
+                | このページは「イベント情報」の一覧ページになります。このページは「イベント情報」の一覧ページになります。このページは「イベント情報」の一覧ページになります。このページは「イベント情報」の一覧ページになります。
+              .p-archive-list__more 
+                a(href="./single.html") read more
+
+          li.p-archive-list__item 
+            .p-archive-list__image 
+              img(src=root_img_event + "img02.jpg", alt="写真：〇〇〇〇〇〇イベント")
+            .p-archive-list__message 
+              h3.p-archive-list__title 
+                | 〇〇〇〇〇〇イベント
+                span 更新日:2025.12.20
+              p.p-archive-list__text 
+                | このページは「イベント情報」の一覧ページになります。このページは「イベント情報」の一覧ページになります。このページは「イベント情報」の一覧ページになります。このページは「イベント情報」の一覧ページになります。
+              .p-archive-list__more 
+                a(href="./single.html") read more

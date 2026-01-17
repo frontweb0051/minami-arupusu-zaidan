@@ -1,0 +1,119 @@
+extend ../../_include/_layout
+
+//- 設定の上書き
+append variables
+  //- Require
+  - var title = '';
+  - var site_name = '';
+  - var description = '';
+  - var slug = 'under'
+  //- Optional
+  - var root = "../../";
+  - var root_img = root + "assets/img/";
+  - var root_img_zigyou = root + "assets/img/mirai-foundation/zigyou/";
+  - var root_link  = "../";
+
+//- CSS追加
+append css
+  link(rel="stylesheet" href=root + "assets/css/under.css")
+
+//- JS追加
+append js
+  script(type="text/javascript" src=site_url + "assets/js/under.min.js")
+
+//- コンテンツ
+block content
+  .p-archive 
+    .c-container 
+      .p-archive-content 
+        h1.p-archive-title 
+          span
+            | レンジャー活動記録
+        p.p-archive-text
+          | 財団は、「自然環境を見守る」「保全活動を推進する」「知っていただく」「来ていただく」の各活動に取り組みます。
+
+        .p-jigyou
+          .p-jigyou-content 
+            //- 【知る】現場巡視及び調査事業
+            .p-jigyou-box 
+              h2.p-jigyou-box__title 
+                | 【知る】現場巡視及び調査事業
+              .p-jigyou-box__flex 
+                .p-jigyou-box__image 
+                  img(src=root_img_zigyou + "img01.jpg", alt="山で写真を撮る人" width="513" height="290")
+                .p-jigyou-box__message 
+                  dl 
+                    dt 南アルプスのパトロールの実施
+                    dd 
+                      | 登山道や山小屋、植生、動物痕跡に係る調査
+                      br
+                      | ふもと地域での意見交換                    
+                  dl 
+                    dt 情報の提供
+                    dd 
+                      | パトロールで得た情報を関係者に提供  
+
+            //- 【守る】自然環境保全事業
+            .p-jigyou-box 
+              h2.p-jigyou-box__title 
+                | 【守る】自然環境保全事業
+              .p-jigyou-box__flex 
+                .p-jigyou-box__image 
+                  img(src=root_img_zigyou + "img02.jpg", alt="山で写真を撮る人" width="513" height="290")
+                .p-jigyou-box__message 
+                  dl 
+                    dt 高山植物保全対策の実施
+                    dd 
+                      | 植生モニタリングや防鹿柵整備の実施
+                      br
+                      | 「高山植物種子保存プロジェクト」支援                  
+                  dl 
+                    dt 静岡県と連携して、高校生のプロジェクトを支援
+                    dd 
+                      | 「お花畑みまもりプロジェクト」の実施
+                      br
+                      | 登山者も参加できる植生モニタリングの仕組の構築                 
+
+            //- 【活かす】利活用促進事業
+            .p-jigyou-box 
+              h2.p-jigyou-box__title 
+                | 【活かす】利活用促進事業
+              .p-jigyou-box__flex 
+                .p-jigyou-box__image 
+                  img(src=root_img_zigyou + "img03.jpg", alt="施設でイベントを実施している様子" width="513" height="290")
+                .p-jigyou-box__message 
+                  dl 
+                    dt 南アルプスユネスコエコパーク登録10周年記念事業の実施
+                    dd 
+                      | 南アルプスを源流とする大井川一帯も含めた記念事業の実施                   
+                  dl 
+                    dt 交流人口拡充の促進
+                    dd 
+                      | 環境貢献につながるツアーの造成
+                      br
+                      | 山に親しむすそ野を広げる親子ツアー等の造成
+                      br
+                      | インバウンド向けツアー等の地域の新しい価値の創出                 
+
+            //- 【広げる】普及・啓発事業
+            .p-jigyou-box 
+              h2.p-jigyou-box__title 
+                | 【広げる】普及・啓発事業
+              .p-jigyou-box__flex 
+                .p-jigyou-box__image 
+                  img(src=root_img_zigyou + "img04.jpg", alt="山から撮った写真" width="513" height="290")
+                .p-jigyou-box__message 
+                  dl 
+                    dt 南アルプスの情報の発信
+                    dd 
+                      | SNS等を活用した現地情報の発信                   
+                  dl 
+                    dt 南アルプスのファンづくり
+                    dd 
+                      | ふもと地域や市街地で対面交流型の魅力発信                 
+                  dl 
+                    dt 環境教育の実施
+                    dd 
+                      | 教育機関等を通じた環境教育の実施
+
+
