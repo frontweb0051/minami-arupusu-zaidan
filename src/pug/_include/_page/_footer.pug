@@ -9,19 +9,20 @@ if page_type == 'under'
 footer.l-footer
   ul.l-footer-links 
     li.l-footer-links__item 
-      a(href="") このサイトについて
+      a(href=root + "aboutweb") このサイトについて
     li.l-footer-links__item 
-      a(href="") サイトマップ
+      a(href=root + "sitemap") サイトマップ
     li.l-footer-links__item 
-      a(href="") 個人情報の取り扱い
+      a(href=root + "kojinjoho") 個人情報の取り扱い
     li.l-footer-links__item 
-      a(href="") リンク集
+      a(href=root + "link") リンク集
   .l-footer-wrap 
     .c-container-1060px 
       .l-footer-content
         .l-footer-flex
           .l-footer-logo 
-            img(src=root_img + "cmn/footer-logo01.png", alt="南アルプスみらい財団" width="266" height="101")
+            a(href=root) 
+              img(src=root_img + "cmn/footer-logo01.png", alt="南アルプスみらい財団" width="266" height="101")
           .l-footer-box 
             p.l-footer-box__text 
               | 一般財団法人 南アルプスみらい財団

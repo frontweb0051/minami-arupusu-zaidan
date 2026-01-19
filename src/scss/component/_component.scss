@@ -139,3 +139,28 @@
     margin: 0 auto; 
   }
 }
+
+.c-button-link {
+  position: relative;
+  background-color: g.$col-green_00877B;
+  display: inline-flex;
+  align-items: center;
+  min-width: g.rem(165px);
+  padding: 8px 20px;
+  color: #fff;
+  font-weight: bold;
+  font-size: g.rem(16px);
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    transform: translateY(-50%);
+    background-image: url("../img/cmn/more-arrow01.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 29px;
+    aspect-ratio: 29/6;
+  }
+}
