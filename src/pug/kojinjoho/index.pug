@@ -1,0 +1,65 @@
+extend ../_include/_layout
+
+//- 設定の上書き
+append variables
+  //- Require
+  - var title = '';
+  - var site_name = '';
+  - var description = '';
+  - var slug = 'under'
+  //- Optional
+  - var root = "../";
+  - var root_img = root + "assets/img/";
+  - var root_link  = "../";
+
+//- コンテンツ
+block content
+  .p-utility 
+    .c-container 
+      .p-utility-wrap 
+        h1.p-utility-title
+          | 個人情報の取り扱い
+        .p-utility-kohinjoho
+          p.p-utility-text
+            | 一般財団法人南アルプスみらい財団（以下、財団）サイトでは、電子申請やご意見、ご提案、お問い合わせなどをいただいた際に提供を受けた個人情報の保有、取得、管理及び利用・提供等について、財団で制定した「個人情報取扱規程」「特定個人情報保護規程」「個人番号の提供を受ける際の本人確認の措置に関する規程」に基づき、次のとおり適切に取り扱います。
+          .p-utility-content 
+            
+            //- 個人情報とは
+            .p-utility-box 
+              h2.p-utility-box__title
+                | 個人情報とは
+              p.p-utility-box__text 
+                | このページで説明する個人情報とは、当サイトを通じて財団が提供を受けた住所・氏名・電話番号・電子メールアドレスなど、個人が特定され得る情報をいいます。また、他の情報と照合することにより、特定の個人を識別することができることとなるもの（マイナンバーなど）も含みます。
+            
+            //- 個人情報の収集について
+            .p-utility-box 
+              h2.p-utility-box__title
+                | 個人情報の収集について
+              p.p-utility-box__text 
+                | 当ホームページを通じて財団が個人情報を収集する際には、利用者ご本人の意思による情報の提供を原則とします。
+                br
+                | また個人情報の収集は、その収集目的を明確にし、その目的を達成するために必要な範囲内にて行います。
+            
+            //- 個人情報の利用制限
+            .p-utility-box 
+              h2.p-utility-box__title
+                | 個人情報の利用制限
+              p.p-utility-box__text 
+                | 収集した個人情報は、収集目的の範囲内で利用します。個人情報を利用者本人の同意なく収集目的以外の理由で利用・提供することありません。
+            
+            //- 個人情報の管理
+            .p-utility-box 
+              h2.p-utility-box__title
+                | 個人情報の管理
+              p.p-utility-box__text 
+                | 収集した個人情報は厳重に管理し、漏洩・不正流用・改ざん等の防止に適切な対応を講じます。
+            
+            //- 個人情報の利用停止請求
+            .p-utility-box 
+              h2.p-utility-box__title
+                | 個人情報の利用停止請求
+              p.p-utility-box__text 
+                | 財団が保有する個人情報は、本人であればだれでも開示請求することが可能です。（未成年者又は成年被後見人の法定代理人は、本人に代わって開示請求することができます。）
+                br
+                br
+                | 開示を受けた自己の個人情報が事実と異なる場合、その情報を訂正または利用停止することができます。また、適切に取り扱われていないと判断した場合は、その情報の利用を停止・消去を請求することができます。

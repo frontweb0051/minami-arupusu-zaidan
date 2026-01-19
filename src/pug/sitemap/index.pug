@@ -1,0 +1,95 @@
+extend ../_include/_layout
+
+//- 設定の上書き
+append variables
+  //- Require
+  - var title = '';
+  - var site_name = '';
+  - var description = '';
+  - var slug = 'under'
+  //- Optional
+  - var root = "../";
+  - var root_img = root + "assets/img/";
+  - var root_link  = "../";
+
+//- コンテンツ
+block content
+  .p-utility 
+    .c-container 
+      .p-utility-wrap 
+        h1.p-utility-title
+          | サイトマップ
+        .p-utility-sitemap
+          .p-utility-content 
+            .p-utility-box 
+              h2.p-utility-box__title
+                | 南アルプスみらい財団とは
+              ul.p-utility-list 
+                li.p-utility-list__item 
+                  | 南アルプスみらい財団の概要
+                  a.p-utility-link.c-button-link(href="") Read more
+                li.p-utility-list__item 
+                  | 財団の取組方針
+                  a.p-utility-link.c-button-link(href="") Read more
+                li.p-utility-list__item 
+                  | 理事長挨拶
+                  a.p-utility-link.c-button-link(href="") Read more
+                li.p-utility-list__item 
+                  | 個財団の事業
+                  a.p-utility-link.c-button-link(href="") Read more
+            
+            //- 南アルプスの情報
+            .p-utility-box 
+              h2.p-utility-box__title
+                | 南アルプスの情報
+              ul.p-utility-list 
+                li.p-utility-list__item 
+                  | レンジャー活動記録
+                  a.p-utility-link.c-button-link(href="") Read more
+                li.p-utility-list__item 
+                  | イベント情報
+                  a.p-utility-link.c-button-link(href="") Read more
+                li.p-utility-list__item 
+                  | レンジャー立ち寄りスポット
+                  a.p-utility-link.c-button-link(href="") Read more
+                li.p-utility-list__item 
+                  | 登山者・関係者の声
+                  a.p-utility-link.c-button-link(href="") Read more
+                li.p-utility-list__item 
+                  | 財団の活動
+                  a.p-utility-link.c-button-link(href="") Read more
+
+            //- 素材閲覧・ダウンロード
+            .p-utility-box 
+              h2.p-utility-box__title
+                | 素材閲覧・ダウンロード
+              ul.p-utility-list 
+                li.p-utility-list__item 
+                  | 財団パンフレット・資料集
+                  a.p-utility-link.c-button-link(href="") Download
+                li.p-utility-list__item 
+                  | 写真素材集
+                  a.p-utility-link.c-button-link(href="") Download
+            .p-utility-flex 
+              .p-utility-box 
+                h2.p-utility-box__title
+                  | このサイトについて
+                a.p-utility-link.c-button-link(href="") Read more
+              .p-utility-box 
+                h2.p-utility-box__title
+                  | 個人情報取扱
+                a.p-utility-link.c-button-link(href="") Read more
+            .p-utility-flex 
+              .p-utility-box 
+                h2.p-utility-box__title
+                  | リンク集
+                a.p-utility-link.c-button-link(href="") Read more
+            .p-utility-flex 
+              .p-utility-box 
+                h2.p-utility-box__title
+                  | お問い合わせ
+                a.p-utility-link.c-button-link(href="") Read more
+              .p-utility-box 
+                h2.p-utility-box__title
+                  | 文字サイズ変更
+                a.p-utility-link.c-button-link(href="") Read more

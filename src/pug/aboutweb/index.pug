@@ -1,0 +1,57 @@
+extend ../_include/_layout
+
+//- 設定の上書き
+append variables
+  //- Require
+  - var title = '';
+  - var site_name = '';
+  - var description = '';
+  - var slug = 'under'
+  //- Optional
+  - var root = "../";
+  - var root_img = root + "assets/img/";
+  - var root_link  = "../";
+
+//- コンテンツ
+block content
+  .p-utility 
+    .c-container 
+      .p-utility-wrap 
+        h1.p-utility-title
+          | このサイトについて
+        p.p-utility-text.p-utility-text__width737px  
+          | 一般財団法人南アルプスみらい財団（以下、財団）サイトのご利用にあたって、下記のご利用条件を必ずご確認ください。
+        .p-utility-aboutweb
+          .p-utility-content 
+            .p-utility-box 
+              h2.p-utility-box__title
+                | 著作権について
+              p.p-utility-box__text 
+                | 当サイトに掲載されている内容（テキスト、画像、PDFその他のデータ）の著作権は財団に帰属します。また、一部の画像などの著作権は原著作者が所有しています。著作権法上認められている行為を除き、無断で転載や改変などを行うことはできません。
+            .p-utility-box 
+              h2.p-utility-box__title
+                | リンクついて
+              h3.p-utility-box__subtitle
+                | 当サイトからのリンクについて
+              p.p-utility-box__text 
+                | 当サイトでは、利用者がより便利にお使いいただけるよう外部（財団の管理外）のウェブサイトへのリンクを提供している場合があります。管理外のウェブサイトにつきましては、財団の情報セキュリティーポリシーは適用されませんので、あらかじめご了解ください。また、当サイトへのリンク設置をご希望される場合は、お問い合わせフォームよりご連絡ください。
+              h3.p-utility-box__subtitle
+                | 当サイトへのリンクについて
+              p.p-utility-box__text 
+                | 当サイトへのリンクは原則として自由です。リンクした際の財団への連絡は不要です。
+                br
+                br
+                | リンクを設定する際には、当サイトへのリンクである旨を明記してください。ただし、リンク先はURLが変更する場合がありますので、トップページ（
+                a(href="https://www.mamf.or.jp", target="_blank", rel="noopener noreferrer") https://www.mamf.or.jp/
+                | ）とすることをお勧めします。
+                br
+                br
+                | なおリンク元のサイト内容が、法令や公序良俗に反する場合などにはリンクの削除をお願いすることがありますので、あらかじめご了承ください。またいかなる場合であっても、リンクに関して発生した損害については一切の責任を負いかねます。
+            .p-utility-box 
+              h2.p-utility-box__title
+                | 免責事項
+              p.p-utility-box__text 
+                | 財団では、当サイトに掲載する情報の正確さには万全を期していますが、利用者が当サイトの情報を用いて行う一切の行為については責任を負いません。また、利用者が当サイトにアクセスしたために被った損害、損失に対しても責任を負いません。
+                br
+                br
+                | また、当サイト上の文書や画像等の各ファイル、及びその内容は、予告なしに変更または削除することがありますので、あらかじめご了承ください。
