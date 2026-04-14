@@ -27,21 +27,24 @@ function bodyFixedOff() {
 /* ==========================================================================
   humberger
 ========================================================================== */
+const humberger_icon = document.getElementById('js-icon');
+const humberger_menu = document.getElementById('js-menu');
+const header_uility = document.querySelector('.l-header-utility');
 
-// const humberger_icon = document.getElementById('js-icon');
-// const humberger_menu = document.getElementById('js-menu');
-
-// humberger_icon.addEventListener('click',function(){
-//   this.classList.toggle('open');
-
-//   if(humberger_icon.classList.contains('open')){
-//     bodyFixedOn();
-//     humberger_menu.classList.add('active');
-//   }else{
-//     bodyFixedOff();
-//     humberger_menu.classList.remove('active');
-//   }
-// });
+if(humberger_icon && humberger_menu){
+  humberger_icon.addEventListener('click',function(){
+    this.classList.toggle('open');
+    header_uility.classList.toggle('active');
+    
+    if(humberger_icon.classList.contains('open')){
+      bodyFixedOn();
+      humberger_menu.classList.add('active');
+    }else{
+      bodyFixedOff();
+      humberger_menu.classList.remove('active');
+    }
+  });
+}
 
 
 /* ==========================================================================
@@ -63,31 +66,36 @@ $('a[href^="#"]').click(function() {
 });
 
 const html = document.querySelector('html');
-const font_small = document.querySelector('.is-small');
-const font_medium = document.querySelector('.is-medium');
-const font_large = document.querySelector('.is-large');
+const font_small = document.querySelectorAll('.is-small');
+const font_medium = document.querySelectorAll('.is-medium');
+const font_large = document.querySelectorAll('.is-large');
 
 function fontDelete() {
   sessionStorage.clear()
   html.classList.remove(...html.classList);
 };
 
-font_small.addEventListener('click', () => {
-  fontDelete();
-  sessionStorage.setItem('font-size','small');
-  html.classList.add('is-small')
+font_small.forEach(item => {
+  item.addEventListener('click', () => {
+    fontDelete();
+    sessionStorage.setItem('font-size','small');
+    html.classList.add('is-small')
+  });  
 });
-font_medium.addEventListener('click', () => {
-  fontDelete();
-  sessionStorage.setItem('font-size','medium');
-  html.classList.add('is-medium')
+font_medium.forEach(item => {
+  item.addEventListener('click', () => {
+    fontDelete();
+    sessionStorage.setItem('font-size','medium');
+    html.classList.add('is-medium')
+  });
 });
-font_large.addEventListener('click', () => {
-  fontDelete();
-  sessionStorage.setItem('font-size','large');
-  html.classList.add('is-large')
+font_large.forEach(item => {
+  item.addEventListener('click', () => {
+    fontDelete();
+    sessionStorage.setItem('font-size','large');
+    html.classList.add('is-large')
+  });
 });
-
 
 document.addEventListener("DOMContentLoaded", () => {
   let session_value = sessionStorage.getItem('font-size');

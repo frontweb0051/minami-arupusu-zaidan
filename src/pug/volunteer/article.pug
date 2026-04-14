@@ -1,0 +1,59 @@
+extend ../_include/_layout
+
+//- 設定の上書き
+append variables
+  //- Require
+  - var title = '';
+  - var site_name = '';
+  - var description = '';
+  - var slug = 'under'
+  //- Optional
+  - var root = "../";
+  - var root_img = root + "assets/img/";
+  - var root_link  = "../";
+
+//- コンテンツ
+block content
+  .p-donation  
+    .c-container 
+      .p-donation-content 
+        h1.p-donation-title
+          | ボランティア活動募集
+        .p-donation-image 
+          picture 
+            img(src=root_img + "donation/fv01.jpg", alt="鳥の画像")
+          p.p-donation-image__text 
+            | 南アルプスの豊かな自然を守るため、
+            br
+            | 皆様のご支援が必要です。
+        p.p-donation-text 
+          | 南アルプスの自然環境を守り、貴重な自然を未来へ残すため
+          br
+          | ボランティア活動への参加をお願いしております。
+          br
+          | レンジャーが手厚くサポートしますので
+          br
+          | 初めての方でも安心してご参加いただけます。
+
+        .p-donation-article
+          .p-donation-article__box 
+            h2
+              | ボランティア活動募集
+            .p-donation-article__flex
+              p.p-donation-article__flex_text                
+                | 現在ボランティア活動の募集は行っておりません。
+                br
+                | 準備が整い次第お知らせいたしますので、今しばらくお待ちください。           
+              .p-donation-article__flex_button
+                a(href="./single.html") read more              
+          .p-donation-article__box 
+            h2
+              | ボランティア活動募集
+            .p-donation-article__flex
+              p.p-donation-article__flex_text                
+                | 現在ボランティア活動の募集は行っておりません。
+                br
+                | 準備が整い次第お知らせいたしますので、今しばらくお待ちください。           
+              .p-donation-article__flex_button
+                a(href="./single.html") read more              
+          

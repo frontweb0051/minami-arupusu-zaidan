@@ -3,12 +3,22 @@
 /* ==========================================================================
   single
 ========================================================================== */
+@media print {
+  header,footer,.c-history_back {
+    display: none;
+  }
+}
 .p-single {
 
   .p-single-content {
     margin-top: 50px;
     padding: 55px 65px 90px;
     background-color: #fff;
+
+    @include g.mq(sm) {
+      margin-top: 16px;
+      padding: 24px 20px;
+    }
   }
   .p-single-sns {
     display: flex;
@@ -22,7 +32,7 @@
       height: 23px;
       padding-left: 10px;
 
-      a {
+      a,button {
         display: flex;
         align-items: center;
         width: 100%;
@@ -56,6 +66,14 @@
     text-align: center;
     font-size: g.rem(25px);
 
+    @include g.mq(sm) {
+      margin-top: 25px;
+      padding: 0 0 10px 80px;      
+      text-align: left;
+      line-height: 1.3;
+      font-size: g.rem(20px);
+    }
+
     &::before {
       content: '';
       position: absolute;
@@ -66,23 +84,57 @@
       background-repeat: no-repeat;
       aspect-ratio: 122/96;
       width: 122px;
+
+      @include g.mq(sm) {
+        bottom: 5px;
+        width: 66px;
+      }
     }
   }
   .p-single-body {
     margin-top: 50px;
 
+    @include g.mq(sm) {
+      margin-top: 30px;
+    }
+
+    h2 {
+      line-height: 1.75;
+      font-weight: 600;
+      font-size: g.rem(20px);
+
+      @include g.mq(sm) {
+        line-height: 1.5;
+        font-size: g.rem(17px);
+      }      
+    }
+
     p {
       line-height: 1.94;
       font-size: g.rem(18px);
+
+      @include g.mq(sm) {
+        line-height: 1.86;
+        font-size: g.rem(15px);
+      }
 
       strong {
         line-height: 1.75;
         font-weight: 600;
         font-size: g.rem(20px);
+
+        @include g.mq(sm) {
+          line-height: 1.5;
+          font-size: g.rem(17px);
+        }
       }
 
       &+p {
         margin-top: 30px;
+
+        @include g.mq(sm) {
+          margin-top: 20px;
+        }
       }
     }
     figure {
@@ -93,6 +145,16 @@
 
       figure {
         margin: 0 !important;
+      }
+    }
+    .aligncenter {
+      width: 100%;
+      text-align: center;
+    }
+    .alignright,.alignleft {
+      @include g.mq(sm) {
+        margin: 0 auto;
+        float: none;
       }
     }
   }

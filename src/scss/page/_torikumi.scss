@@ -6,16 +6,31 @@
 .p-torikumi {
   margin-top: 55px;
 
+  @include g.mq(sm) {
+    margin-top: 30px;
+  }
+
   .p-torikumi-flex {
-    display: flex;
-    column-gap: 60px;
+    @include g.mq(md) {
+      display: flex;
+      column-gap: 60px;
+    }
   }
   .p-torikumi-message {
-    flex: 0 1 100%;
     font-weight: 600;
     line-height: 2;
     font-size: g.rem(22px);
     
+    @include g.mq(md) {
+      flex: 0 1 100%;      
+    }
+    @include g.mq(sm) {
+      line-height: 1.2;
+      font-size: g.rem(18px);
+    }
+    @include g.mq(xs) {
+      font-size: g.rem(15px);
+    }
   }
   .p-torikumi-image {
     flex: 0 0 555px;
@@ -23,8 +38,18 @@
     font-weight: 300;
     font-size: g.rem(18px);
 
+    @media screen and (min-width:767px) and (max-width:1240px) {
+      flex: 0 0 g.px2vw(555,1240);
+    }
+
+    @include g.mq(sm) {
+      margin-top: 25px;
+      font-size: g.rem(13px);
+    }
+
     img {
-      margin-bottom: 20px;
+      aspect-ratio: 550/185;
+      margin-bottom: 20px
     }
   }
   .p-torikumi-text {
@@ -32,6 +57,11 @@
     font-weight: 300;
     line-height: 1.75;
     font-size: g.rem(20px);
+
+    @include g.mq(sm) {
+      margin-top: 40px;
+      font-size: g.rem(15px);
+    }
 
     a {
       display: inline-block;
@@ -43,5 +73,9 @@
     justify-content: space-between;
     column-gap: 10px;
     margin-top: 70px;
+
+    @include g.mq(sm) {
+      margin-top: 24px;
+    }
   }
 }

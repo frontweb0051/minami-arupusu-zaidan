@@ -27,16 +27,20 @@ block content
               ul.p-utility-list 
                 li.p-utility-list__item 
                   | 南アルプスみらい財団の概要
-                  a.p-utility-link.c-button-link(href="") Read more
+                  .p-utility-link
+                    a.c-button-link(href="") Read more
                 li.p-utility-list__item 
                   | 財団の取組方針
-                  a.p-utility-link.c-button-link(href="") Read more
+                  .p-utility-link
+                    a.c-button-link(href="") Read more
                 li.p-utility-list__item 
                   | 理事長挨拶
-                  a.p-utility-link.c-button-link(href="") Read more
+                  .p-utility-link
+                    a.c-button-link(href="") Read more
                 li.p-utility-list__item 
                   | 個財団の事業
-                  a.p-utility-link.c-button-link(href="") Read more
+                  .p-utility-link
+                    a.c-button-link(href="") Read more
             
             //- 南アルプスの情報
             .p-utility-box 
@@ -45,19 +49,24 @@ block content
               ul.p-utility-list 
                 li.p-utility-list__item 
                   | レンジャー活動記録
-                  a.p-utility-link.c-button-link(href="") Read more
+                  .p-utility-link
+                    a.c-button-link(href="") Read more
                 li.p-utility-list__item 
                   | イベント情報
-                  a.p-utility-link.c-button-link(href="") Read more
+                  .p-utility-link
+                    a.c-button-link(href="") Read more
                 li.p-utility-list__item 
                   | レンジャー立ち寄りスポット
-                  a.p-utility-link.c-button-link(href="") Read more
+                  .p-utility-link
+                    a.c-button-link(href="") Read more
                 li.p-utility-list__item 
                   | 登山者・関係者の声
-                  a.p-utility-link.c-button-link(href="") Read more
+                  .p-utility-link
+                    a.c-button-link(href="") Read more
                 li.p-utility-list__item 
                   | 財団の活動
-                  a.p-utility-link.c-button-link(href="") Read more
+                  .p-utility-link
+                    a.c-button-link(href="") Read more
 
             //- 素材閲覧・ダウンロード
             .p-utility-box 
@@ -66,30 +75,49 @@ block content
               ul.p-utility-list 
                 li.p-utility-list__item 
                   | 財団パンフレット・資料集
-                  a.p-utility-link.c-button-link(href="") Download
+                  .p-utility-link
+                    a.c-button-link(href="") Download
                 li.p-utility-list__item 
                   | 写真素材集
-                  a.p-utility-link.c-button-link(href="") Download
+                  .p-utility-link
+                    a.c-button-link(href="") Download
             .p-utility-flex 
               .p-utility-box 
                 h2.p-utility-box__title
                   | このサイトについて
-                a.p-utility-link.c-button-link(href="") Read more
+                .p-utility-link
+                  a.c-button-link(href="") Read more
               .p-utility-box 
                 h2.p-utility-box__title
                   | 個人情報取扱
-                a.p-utility-link.c-button-link(href="") Read more
+                .p-utility-link
+                  a.c-button-link(href="") Read more
             .p-utility-flex 
               .p-utility-box 
                 h2.p-utility-box__title
                   | リンク集
-                a.p-utility-link.c-button-link(href="") Read more
+                .p-utility-link
+                  a.c-button-link(href="") Read more
+                .p-utility-icon.p-utility-sitemap__icon01(aria-hidden="true") 
+                  img(src=root_img + "utility/sitemap/icon01.png", alt="")
             .p-utility-flex 
               .p-utility-box 
                 h2.p-utility-box__title
                   | お問い合わせ
-                a.p-utility-link.c-button-link(href="") Read more
+                .p-utility-link
+                  a.c-button-link(href="") Read more
               .p-utility-box 
                 h2.p-utility-box__title
                   | 文字サイズ変更
-                a.p-utility-link.c-button-link(href="") Read more
+                .p-utility-sitemap__size
+                  ul.c-font_change
+                    li.c-font_change-item.is-small 
+                      button
+                        img(src=root_img + "cmn/font-size-small.png", alt="小" width="17" height="16")
+                    li.c-font_change-item.is-medium  
+                      button
+                        img(src=root_img + "cmn/font-size-medium.png", alt="中" width="14" height="16")
+                    li.c-font_change-item.is-large  
+                      button 
+                        img(src=root_img + "cmn/font-size-big.png", alt="大" width="16" height="16")
+            

@@ -15,6 +15,9 @@ $col-blue_06C9F7: #06C9F7;
 // Hiragino Kaku Gothic ProNの代替
 $font-sans: "Noto Sans JP",sans-serif;
 
+// ヒラギノ明朝 ProN
+$font-serif: "Noto Serif JP", serif;
+
 // Hiragino Maru Gothic StdNの代替
 $font-zen: "Zen Maru Gothic", sans-serif;
 
@@ -23,3 +26,4 @@ $font-jost: "Jost", sans-serif;
 
 
 $transtion-time: .3s;
+$transtion-all: all .3s;

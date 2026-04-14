@@ -27,7 +27,7 @@ block content
           .p-gaiyou-content
             h2.p-gaiyou-title 
               | 財団の概要
-            table.p-gaiyou-table
+            table.p-gaiyou-table.p-gaiyou-table-ver01
               tr 
                 th(style="width: 19%") 
                   | 所在地
@@ -76,19 +76,46 @@ block content
                 th 
                   | 定　款
                 td 
-                  | 定款（PDF：127KB）
+                  a(href="") 定款（PDF：127KB）
               tr 
                 th 
                   | 決算の状況
                 td 
-                  a(href="") 2022年度（令和4年度）  貸借対照表（PDF：38KB）、  正味財産増減計算書（PDF：82KB）
-                  a(href="") 2023年度（令和5年度）  貸借対照表（PDF：33KB）、  正味財産増減計算書（PDF：90KB）
-                  a(href="") 2024年度（令和6年度）  貸借対照表（PDF：31KB）、  正味財産増減計算書（PDF：89KB）
+                  .p-gaiyou-box 
+                    p.p-gaiyou-year
+                      | 2022年度
+                      br.u-show-mobile
+                      | （令和4年度）
+                    ul.p-gaiyou-list 
+                      li.p-gaiyou-list__item 
+                        a(href="") 貸借対照表（PDF：38KB）
+                      li.p-gaiyou-list__item 
+                        a(href="") 正味財産増減計算書（PDF：82KB）
+                  .p-gaiyou-box 
+                    p.p-gaiyou-year
+                      | 2024年度
+                      br.u-show-mobile
+                      | （令和5年度）
+                    ul.p-gaiyou-list 
+                      li.p-gaiyou-list__item 
+                        a(href="") 貸借対照表（PDF：33KB）
+                      li.p-gaiyou-list__item 
+                        a(href="") 正味財産増減計算書（PDF：90KB）
+                  .p-gaiyou-box 
+                    p.p-gaiyou-year
+                      | 2024年度
+                      br.u-show-mobile
+                      | （令和6年度）
+                    ul.p-gaiyou-list 
+                      li.p-gaiyou-list__item 
+                        a(href="") 貸借対照表（PDF：31KB）
+                      li.p-gaiyou-list__item 
+                        a(href="") 正味財産増減計算書（PDF：89KB）
           
           .p-gaiyou-content
             h2.p-gaiyou-title 
               | 役員等            
-            table.p-gaiyou-table
+            table.p-gaiyou-table.p-gaiyou-table-ver02
               tr 
                 th(style="width: 19%") 
                   | 理事長
@@ -177,7 +204,7 @@ block content
           .p-gaiyou-content
             h2.p-gaiyou-title 
               | 事務局
-            table.p-gaiyou-table
+            table.p-gaiyou-table.p-gaiyou-table-ver01
               tr 
                 th(style="width: 19%") 
                   | 所在地

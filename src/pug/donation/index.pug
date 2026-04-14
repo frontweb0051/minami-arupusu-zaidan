@@ -1,0 +1,87 @@
+extend ../_include/_layout
+
+//- 設定の上書き
+append variables
+  //- Require
+  - var title = '';
+  - var site_name = '';
+  - var description = '';
+  - var slug = 'under'
+  //- Optional
+  - var root = "../";
+  - var root_img = root + "assets/img/";
+  - var root_link  = "../";
+
+//- コンテンツ
+block content
+  .p-donation  
+    .c-container 
+      .p-donation-content 
+        h1.p-donation-title
+          | 南アルプスの自然環境を守る 寄付お願い 
+        .p-donation-image 
+          picture 
+            img(src=root_img + "donation/fv01.jpg", alt="鳥の画像")
+          p.p-donation-image__text 
+            | 南アルプスの豊かな自然を守るため、
+            br
+            | 皆様のご支援が必要です。
+        p.p-donation-text 
+          | あなたの寄付が、
+          br.u-show-mobile
+          | 南アルプスの自然環境を守る力になります。
+          br
+          | いま、南アルプスは様々な危機に陥っています。
+          br.u-show-mobile
+          | 貴重な南アルプスの自然を
+          br.u-show-desktop
+          | 未来へ残すために
+          br.u-shoe-mobile
+          | 皆様のご支援をお願いしております。
+        .p-donation-footer__box 
+          p.p-donation-footer__box_text 
+            | ご寄付のお申込みはこちら        
+          .p-donation-footer__button 
+            a(href="https://syncable.biz/associate/miraifoundation/donate" target="_blank") 
+              span 
+                .p-donation-footer__image            
+                  img(src=root_img + "donation/logo01.png", alt="ご寄付のお申込みはこちら")
+
+        .p-donation-article 
+          h2
+            | 私たちの取り組む課題
+          h3 南アルプスの自然
+          p 南アルプスは、ライチョウに代表される氷河期の遺存種と呼ばれる希少種にとっては、世界の南限の生息地となっています。
+          h3 貴重な高山植物のお花畑の危機
+          p 南アルプスは、氷河が存在していた日本アルプスの中でも最も南に位置することから地球温暖化の影響を最も大きく受けるとともに、近年、シカによる食害が、希少なお花畑だけでなく、南アルプスの生態系全体に大きな影響を及ぼしています。
+          h3 なぜ南アルプスの保全活動に取り組むのか
+          p 南アルプスは、その希少な生態系とそれを守る地域の関りが評価され、2014年にユネスコエコパークに認定されています。
+          br
+          p 
+            a(style="color:#FF00EB;" href="https://main-jbrn.ssl-lolipop.jp/about/") 【ユネスコエコパークとは】 
+            br
+            a(style="color:#FF00EB;" href="https://minami-alps-br.org") 【南アルプスユネスコエコパーク】 
+          br
+          p 
+            | 一方、南アルプスの自然環境を守ってきた麓の集落は、高齢化や過疎化で、その活動を支えることが困難になりつつあります。
+            br
+            | このままでは、南アルプスの良好な自然環境を次の世代に引き継ぐことが難しくなってしまいます。
+          h3 支援金の使い道
+          p 
+            | みなさまからのご支援は、次のような活動に活用させていただきます。
+            br
+            | 1.より多くの方々に南アルプスの価値や魅力、現状や課題を知っていただくための取組
+            br
+            | 2.シカ柵の設置など、直接的な生態系の保全活動や環境調査
+            br
+            | 3.学校などへの出前授業や体験学習会
+            br
+            | 4.南アルプスの保全活動全般に係る諸費
+        .p-donation-footer__box 
+          p.p-donation-footer__box_text 
+            | ご寄付のお申込みはこちら        
+          .p-donation-footer__button 
+            a(href="https://syncable.biz/associate/miraifoundation/donate" target="_blank") 
+              span 
+                .p-donation-footer__image            
+                  img(src=root_img + "donation/logo01.png", alt="ご寄付のお申込みはこちら")

@@ -1,0 +1,149 @@
+extend ../../_include/_layout
+
+//- 設定の上書き
+append variables
+  //- Require
+  - var title = '';
+  - var site_name = '';
+  - var description = '';
+  - var slug = 'under'
+  //- Optional
+  - var root = "../../";
+  - var root_img = root + "assets/img/";
+  - var root_img_torikumi = root + "assets/img/mirai-foundation/torikumi/";
+  - var root_link  = "../";
+
+//- コンテンツ
+block content
+  .p-archive 
+    .c-container 
+      .p-archive-content 
+        h1.p-archive-title 
+          span
+            | 財団の基本理念（CorePhilosophy）
+
+        .p-kihonrinen 
+          h2.p-kihonrinen-strong 
+            | 財団の基本理念策定の経緯
+          p.p-kihonrinen-text 
+            | 私たちを取り巻く地球環境には、地球が人間活動によってこれ以上越えてはいけないとされる限界値（プラネタリーバウンダリー）が存在しています。その中でも、生物圏の健全さに関しては、既にその限界ラインを越えていると言われています。
+            br
+            | そのため、地球温暖化対策や生物多様性の保全に関する問題は、国境を越え地球規模でシームレスに取り組まなければならない最重要課題の一つとなっています。
+            br
+            | 一方、国内では高齢化や人口減少、生活様式の変化などに伴う生態系への影響が深刻化しており、ユネスコエコパークに登録されている南アルプスにおいても、生態系の保全が危ぶまれる状況にあります。
+            br
+            | 南アルプスみらい財団では、こういった課題認識のもと、財団の取り組むべき方向を基本理念として定め、可視化することにより、連携の輪の一層の拡大を目指すことと致しました。
+          h2.p-kihonrinen-strong.p-kihonrinen-strong--white 
+            | 目標（Purpose）
+          .p-kihonrinen-box 
+            h3.p-kihonrinen-box__title 
+              | 財団の社会的存在意義
+            p.p-kihonrinen-box__text 
+              span.color-green ●
+              span 
+                | 南アルプスを通じて、人と自然がともに生きる世界を創造する
+                br
+                | （Create harmony between people and nature through the Minami Alps）              
+              br
+              | 私たちを取り巻くすべての生態系は地球規模でつながっています。当財団は、南アルプスを未来につなぐ取組を通じて、地球規模での生態系保全に貢献していきます。
+          h2.p-kihonrinen-strong.p-kihonrinen-strong--white 
+            | 使命（Mission）
+          .p-kihonrinen-box 
+            h3.p-kihonrinen-box__title 
+              | 財団の使命
+            p.p-kihonrinen-box__text 
+              span.color-green ●
+              span 
+                | 南アルプスの利活用と保全の好循環を創出し、自然環境を未来につなぐ
+                br
+                | （Build a sustainable cycle to enjoy, enrich and conserve the Minami Alps for the future）
+              br
+              | ユネスコエコパークである南アルプスを訪れる人々を増やしながら自然環境の保全活動の拡充を図り、利活用と保全の好循環を生み出すことで、南アルプスの貴重な自然環境をより良い形で未来に引き継いでいきます。
+          
+          //- 価値基準（Values）
+          h2.p-kihonrinen-strong.p-kihonrinen-strong--white 
+            | 価値基準（Values）
+          .p-kihonrinen-box 
+            h3.p-kihonrinen-box__title 
+              | 財団の価値観（大切にしているもの）
+            p.p-kihonrinen-box__text 
+              span.color-green ●
+              span 
+                | 自然と人への敬意
+                br
+                | （Respect for nature and people）
+              br
+              | 南アルプスの美しさを愛し、そこに暮らす人々とのつながりを大切にします。
+            p.p-kihonrinen-box__text 
+              span.color-green ●
+              span 
+                | いまを知り、共に未来へ
+                br
+                | （Understand the present and shape a shared future）
+              br
+              | 南アルプスの今を捉え、人と自然が調和する未来を常に意識します。
+          
+          //- 未来像（Vision）
+          h2.p-kihonrinen-strong.p-kihonrinen-strong--white 
+            | 未来像（Vision）
+          .p-kihonrinen-box 
+            h3.p-kihonrinen-box__title 
+              | 財団が目指す財団の未来像
+            p.p-kihonrinen-box__text 
+              span.color-green ●
+              span 
+                | 南アルプスにとって必要不可欠なイノベーターとなる
+                br
+                | （Become an essential innovative force for the Minami Alps）
+              br
+              | 南アルプスは、あまりに広大かつ隔絶された地域であるため、既存の手段だけでは持続的に保全することは難しい状況にあります。
+              br
+              | 多くの方々の参加によって実現する“持続的な保全活動”へとつながる新たな仕組みを構築するため、私たちは常に先頭に立って汗をかくことで、信頼され、なくてはならないと思ってもらえる組織を目指します。
+
+          //- 行動指針（Code of Conduct）
+          h2.p-kihonrinen-strong.p-kihonrinen-strong--white 
+            | 行動指針（Code of Conduct）
+          .p-kihonrinen-box 
+            h3.p-kihonrinen-box__title 
+              | 財団の行動指針
+            p.p-kihonrinen-box__text 
+              span.color-green ●
+              span 
+                | 南アルプスをもっと身近に
+                br
+                | （Make the Minami Alps accessible and inviting）
+              br
+              | より多くの人が南アルプスに親しみを持てるよう行動します。
+            p.p-kihonrinen-box__text 
+              span.color-green ●
+              span 
+                | つながりを、力に変える
+                br
+                | （Empower through connection）
+              br
+              | 地域や世代を超えて協力の輪を広げ、南アルプスの未来を共に創ります。
+            p.p-kihonrinen-box__text 
+              span.color-green ●
+              span 
+                | 仲間を信じ、共に進む
+                br
+                | （Move forward with mutual trust）
+              br
+              | 明るく風通しのよい関係性を築き、笑顔あふれるチームで前向きに活動します。
+            p.p-kihonrinen-box__text 
+              span.color-green ●
+              span 
+                | 未来を育む希望の種を蒔く
+                br
+                | （Sow the seeds of hope for the future）
+              br
+              | こどもたちに夢と希望を届ける活動を通じて、次世代につなぐ使命を果たします。
+            p.p-kihonrinen-box__text 
+              span.color-green ●
+              span 
+                | 常にイケてる組織を目指す
+                br
+                | （Stay dynamic and inspiring）
+              br
+              | 周囲を常にワクワクさせ、つながりたくなるような組織を目指します。
+

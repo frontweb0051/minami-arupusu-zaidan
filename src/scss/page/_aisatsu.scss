@@ -6,14 +6,25 @@
 .p-aisatsu {
   margin-top: 40px;
 
+  @include g.mq(sm) {
+    margin-top: 40px;
+  }
+
   .p-aisatsu-photo {
-    max-width: 458px;
+    @include g.mq(md) {      
+      max-width: 458px;
+    }
   }
   .p-aisatsu-text {
     margin-top: 56px;
     font-weight: 300;
     line-height: 1.75;
     font-size: g.rem(20px);
+
+    @include g.mq(sm) {
+      margin-top: 25px;
+      font-size: g.rem(15px);
+    }
   }
   .p-aisatsu-name {
     margin-top: 43px;
@@ -21,11 +32,21 @@
     font-weight: 400;
     font-size: g.rem(20px);
 
+    @include g.mq(sm) {
+      margin-top: 20px;
+      font-size: g.rem(15px);
+    }
+
     span {
       display: block;
       margin-top: 20px;
       font-weight: 600;
       font-size: g.rem(22px);
+
+      @include g.mq(sm) {
+        margin-top: 10px;
+        font-size: g.rem(20px);
+      }
     }
   }
 }

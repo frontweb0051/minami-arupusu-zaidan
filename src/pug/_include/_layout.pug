@@ -13,13 +13,13 @@ html(lang=lang)
     include _js
 
   body
-  <script async src="https://cse.google.com/cse.js?cx=65e8adbc80447429b">
-  </script>
-    
-    include _page/_header
-    main.l-main
-      //- コンテンツ
-      block content
+    .l-base-bg
+      //- <script async src="https://cse.google.com/cse.js?cx=65e8adbc80447429b"></script>
+      a.c-skip-link(href="#main-content") 主コンテンツへスキップ
+      include _page/_header
+      main.l-main(role="main" aria-label="主コンテンツ" id="main-content" tabindex="-1")
+        //- コンテンツ
+        block content
 
-    //- include _page/_sidebar
-    include _page/_footer
+      include _page/_sidebar
+      include _page/_footer

@@ -1,0 +1,86 @@
+extend ../_include/_layout
+
+//- 設定の上書き
+append variables
+  //- Require
+  - var title = '';
+  - var site_name = '';
+  - var description = '';
+  - var slug = 'under'
+  //- Optional
+  - var root = "../";
+  - var root_img = root + "assets/img/";
+  - var root_link  = "../";
+
+//- コンテンツ
+block content
+  .p-donation  
+    .c-container 
+      .p-donation-content 
+        h1.p-donation-title
+          | 南アルプス保全プロジェクト　ご協力のお願い
+        .p-donation-image 
+          picture 
+            img(src=root_img + "product/fv01.jpg", alt="山の画像")
+          p.p-donation-image__text 
+            | 希少な生態系と豊かな自然資本を未来に
+            br
+            | 引き継ぐためのプロジェクトに賛同し、
+            br
+            | 協働いただける企業様を募集しています。           
+        .p-donation-article.p-donation-product 
+          h2.center
+            | 南アルプスを守る
+          strong 一般財団法人南アルプスみらい財団は、希少な生態系と豊かな自然資本を未来へ引き継ぐため、企業と協働する「南アルプス保全プロジェクト」を推進しており、企業の皆様のご協力をお願いしております。南アルプスは、ライチョウなどの氷河期の遺存種が生きる世界的にも貴重な地域であり、地球温暖化の影響を最も受けやすい場所の一つです。また、本州唯一の原生自然環境保全地域を有し、水資源や生物多様性を支える極めて重要な自然資本を形成しています。
+          
+          p.bold 
+            | プロジェクトの特徴
+            br
+            |寄付ではなく、ESG・TNFDに資する“事業投資”
+          p 
+            | 企業のサステナビリティ戦略を具体的な実績として積み上げられる、実践型の参画モデルです。
+            br
+            | ・自社方針に合わせた柔軟な関わり方
+            br
+            | ・成果の可視化とレポート活用を支援
+            br
+            | ・社会的価値と企業価値の双方を創出
+          p.bold 
+            | 本プロジェクトの強み
+          p 
+            | 南アルプスに精通し、行政・研究者・地域団体と連携する南アルプスみらい財団が、中立的かつ専門的な立場で保全活動を統括します。支援企業の皆様は安心して持続的な環境投資に取り組めます。
+          p.bold 
+            | 企業スポンサーのメリット
+          p 
+            | ・ESG・TNFD対応の具体的な成果を形成
+            br
+            | ・国内有数の自然資本への長期的投資
+            br
+            | ・社員参加型プログラムなどの特典
+            br
+            | ・企業の信頼性・ブランド価値の向上
+          p.bold プラン一覧
+          .image 
+            picture 
+              source(media="(max-width: 767px)", srcset=root_img + "product/sp/plan-table.png")
+              img(src=root_img + "product/plan-table.png", alt="プランの画像")  
+        .p-donation-footer 
+          p.p-donation-footer__title 
+            | ともに、“みらい”へ残す。
+          p.p-donation-footer__text 
+            | 南アルプスを守ることは、
+            br
+            | 社会を支える自然資本を守ることです。
+            br
+            | ぜひ企業スポンサーとして、
+            br.u-show-mobile
+            | 未来への価値創出にご参加ください。
+        .p-donation-footer__box.p-donation-footer__box--product
+          p.p-donation-footer__box_text 
+            | 南アルプス保全プロジェクトの
+            br
+            | お申込みはこちら        
+          .p-donation-footer__button 
+            a(href="https://syncable.biz/associate/miraifoundation/donate" target="_blank") 
+              span 
+                | お問い合わせ

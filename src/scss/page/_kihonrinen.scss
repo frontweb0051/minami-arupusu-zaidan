@@ -1,0 +1,94 @@
+@use "../global" as g;
+
+/* ==========================================================================
+  kihonrinen
+========================================================================== */
+.p-kihonrinen {
+  margin-top: 50px;
+
+  @include g.mq(sm) {
+    margin-top: 40px;
+    padding: 0 20px;
+  }
+
+  .p-kihonrinen-strong {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 30px;
+    margin-bottom: 30px;
+    height: 60px;
+    background: #00877B;
+    color: #fff;
+    font-weight: 600;
+    letter-spacing: 0.002em;
+    font-size: g.rem(22px);
+
+    @include g.mq(sm) {
+      height: 46px;
+      margin-bottom: 25px;
+      font-size: g.rem(18px);
+    }
+
+    &.p-kihonrinen-strong--white {
+      background: #fff;
+      color: #00877B;
+      border: 3px solid #00877B;
+
+      @include g.mq(sm) {
+        border: 2px solid #00877B;
+      }
+    }
+  }
+  .p-kihonrinen-text {
+    margin-bottom: 70px;
+    font-weight: 300;
+    line-height: 1.94;
+    font-size: g.rem(18px);
+
+    @include g.mq(sm) {
+      margin-bottom: 40px;
+      font-size: g.rem(15px);
+    }
+  }
+  .p-kihonrinen-box {
+    margin-bottom: 70px;
+    @include g.mq(sm) {
+      margin-bottom: 45px;
+    }
+    &:last-child {
+      margin-bottom: 0;
+    } 
+  } 
+  .p-kihonrinen-box__title {
+    color: #00877B;
+    border-bottom: 3px solid #00877B;
+    padding-bottom: 10px;
+    font-weight: 600;
+    font-size: g.rem(22px);
+
+    @include g.mq(sm) {
+      font-size: g.rem(18px);
+      border-bottom: 2px solid #00877B;
+    }
+  }
+  .p-kihonrinen-box__text {
+    margin-top: 20px;
+    line-height: 1.6;
+    font-size: g.rem(18px);
+
+    @include g.mq(sm) {
+      font-size: g.rem(15px);
+    }
+
+    span {
+      font-weight: 600;
+      &.color-green {
+        color: #00877B;        
+      }
+    }
+    &+.p-kihonrinen-box__text {
+      margin-top: 40px;
+    }
+  }
+}

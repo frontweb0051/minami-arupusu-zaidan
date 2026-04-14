@@ -7,7 +7,8 @@
 // break point
 // デフォルトはmdでレイアウト切り替え
 $breakpoints: (
-  'xs': (min-width: 0),
+  'xs': (max-width: 400px),
+  'tablet': (max-width: 600px),
   'sm': (max-width: 767px),
   'md': (min-width: 768px),
   'lg': (min-width: 980px),

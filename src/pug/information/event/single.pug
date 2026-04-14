@@ -20,14 +20,14 @@ block content
       .p-single-content 
         ul.p-single-sns 
           li.p-single-sns__item 
-            a(href="") 
-              .p-single-sns__icon 
+            button(onclick="window.print()")
+              .p-single-sns__icon(aria-hidden="true")  
                 img(src=root_img + "single/copy-icon01.png", alt="")
               p.p-single-sns__text 
                 | 印刷する！
           li.p-single-sns__item 
             a(href="") 
-              .p-single-sns__icon 
+              .p-single-sns__icon(aria-hidden="true")  
                 img(src=root_img + "single/facebook-icon01.png", alt="")
               p.p-single-sns__text 
                 | シェアする！
@@ -97,3 +97,13 @@ block content
           p 
             a(href="" style="color:#06C9F7;") 詳細はこちら（PDF：2,928KB）
             | をご覧ください。
+
+        .p-donation-footer__box.p-donation-footer__box--volunteer
+          p.p-donation-footer__box_text 
+            | ボランティア活動参加の
+            br
+            | お申込みはこちら        
+          .p-donation-footer__button 
+            a(href="https://syncable.biz/associate/miraifoundation/donate" target="_blank") 
+              span 
+                | ボランティア活動

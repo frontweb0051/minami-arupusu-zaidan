@@ -7,17 +7,28 @@
 
   .p-gaiyou-title {
     padding-bottom: 15px;
-    border-bottom: 3px solid g.$col-green_00877B;
     color: g.$col-green_00877B;
     font-weight: 600;
     text-align: center;
     font-size: g.rem(22px);
+
+    @include g.mq(md) {
+      border-bottom: 3px solid g.$col-green_00877B;      
+    }
+    @include g.mq(sm) {
+      font-size: g.rem(20px);
+    }
   }
   .p-gaiyou-text {
     margin-top: 40px;
     letter-spacing: 0.002em;
     line-height: 1.94;
     font-size: g.rem(18px);
+
+    @include g.mq(sm) {
+      margin-top: 20px;
+      font-size: g.rem(15px);
+    }
 
     a {
       color: g.$col-blue_06C9F7;
@@ -26,31 +37,178 @@
   .p-gaiyou-content {
     margin-top: 60px;
 
+    @include g.mq(sm) {
+      margin-top: 40px;
+    }
+
     &+.p-gaiyou-content {
       margin-top: 75px;
+
+      @include g.mq(sm) {
+        margin-top: 40px;
+      }
     }
   }
   .p-gaiyou-table {
+    margin-top: 40px;
+
+    a {
+      display: block;
+      color: g.$col-blue_06C9F7;
+    }
+    tbody {
+      @include g.mq(sm) {
+        display: block;
+        width: 100%;
+      }
+    }
+    th,td {
+      @include g.mq(md) {        
+        border: 1px solid #707070;
+      }            
+    } 
+    th {
+      font-weight: 600;
+      text-align: center;
+      vertical-align: middle;
+    }   
+    td {
+      font-weight: 300;
+      line-height: 1.75;
+
+      @include g.mq(md) {
+        padding: 15px 45px;        
+      }
+    }
+  }
+  .p-gaiyou-table-ver01 {
     width: 100%;
     margin-top: 40px;
-    border-collapse: collapse;
-    
+
+    @include g.mq(sm) {
+      display: block;
+      margin-top: 15px;
+    }
+    tr {
+      @include g.mq(sm) {
+        display: flex;
+        flex-direction: column;
+      }
+    }
     th,td {
-      border: 1px solid #707070;
+      @include g.mq(md) {        
+        border: 1px solid #707070;
+      }      
+      @include g.mq(sm) {
+        width: 100% !important;
+      }
     }
     th {
       font-weight: 600;
       text-align: center;
       vertical-align: middle;
+
+      @include g.mq(sm) {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 27px;
+        padding: 0;
+        border: 1px solid g.$col-black;
+      }
     }
     td {
-      padding: 15px 45px;
-      font-weight: 300;
-      line-height: 1.75;
+
+      @include g.mq(sm) {
+        padding: 5px 10px 15px 0;
+        text-align: left;
+      }
+    }      
+  }  
+  .p-gaiyou-table-ver02 {
+    
+    @include g.mq(md) {
+      border-collapse: collapse;      
+    }
+    tr {
+      @include g.mq(sm) {
+        display: grid;
+        grid-template: 
+        "A B" auto
+        "A C" auto / 70px auto;
+        align-items: baseline;
+      }
+      &+tr {
+        @include g.mq(sm) {
+          margin-top: 10px;
+        }
+      }
+    }
+    th,td {
+      @include g.mq(sm) {
+        letter-spacing: normal;
+        width: auto !important;
+      }
+    }
+    th {
+      @include g.mq(sm) {
+        grid-area: A;
+        display: flex;
+        align-items: baseline;    
+        flex: 0 0 61px;   
+        font-size: g.rem(15px);         
+      }
+    }
+    td {
+    
+      @include g.mq(sm) {
+        text-align: left;
+        font-size: g.rem(14px);
+      }
+
+      &:first-child {
+        grid-area: B;
+      }
+      &:last-child {
+        grid-area: C;
+      }
+    }
+  }
+  .p-gaiyou-box {
+    @include g.mq(sm) {
+      display: flex;
+      column-gap: 10px;
+      font-size: g.rem(14px);
+      margin-top: 20px;
+    }
+    &+.p-gaiyou-box {
+      @include g.mq(sm) {
+        margin-top: 10px;
+      }
+    }
+  }
+  .p-gaiyou-year {
+    @include g.mq(sm) {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex: 0 0 100px;
+      text-align: center;
+      background-color: #959595;
+      color: #fff;
+      line-height: 1.21;
+    }
+  }
+  .p-gaiyou-list {
+
+    .p-gaiyou-list__item {
+
+      @include g.mq(sm) {
+        margin-top: 2px;
+      }
 
       a {
-        display: block;
-        color: g.$col-blue_06C9F7;
+        display: inline-block;
       }
     }
   }

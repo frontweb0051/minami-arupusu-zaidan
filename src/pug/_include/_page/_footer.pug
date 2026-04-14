@@ -6,7 +6,7 @@
 if page_type == 'under'
   include ../_component/_history-back
 
-footer.l-footer
+footer.l-footer(role="contentinfo" aria-label="サイトフッター")
   ul.l-footer-links 
     li.l-footer-links__item 
       a(href=root + "aboutweb") このサイトについて
@@ -29,20 +29,29 @@ footer.l-footer
               span Minami-Alps Mirai Foundation
             .l-footer-contact 
               dl 
-                dt 法人番号：
+                dt 【法人番号】
                 dd 9080005007470
               dl 
-                dt 本所：
-                dd 〒422-8017 静岡市駿河区大谷5762ふじのくに地球環境史ミュージアム3階
+                dt 【本所】
+                dd 
+                  | 〒422-8017 静岡市駿河区大谷5762
+                  br.u-show-mobile
+                  | ふじのくに地球環境史ミュージアム3階
               dl 
-                dt 出先：
-                dd 〒420-8061 静岡市葵区田代 静岡市南アルプス自然ふれあいセンター内
+                dt 【出先】
+                dd 
+                  | 〒420-8061 静岡市葵区田代 
+                  br.u-show-mobile
+                  | 静岡市南アルプス自然ふれあいセンター内
               dl 
-                dt 電話番号：
+                dt 【電話番号】
                 dd 054-238-2270　（ファクス番号:054-238-2275）
               dl 
-                dt お問い合わせ時間：
-                dd 平日 8時30分から17時15分まで（土曜日・日曜日・祝日 休業）
+                dt 【お問い合わせ時間】
+                dd 
+                  | 平日 8時30分から17時15分まで
+                  br.u-show-mobile
+                  | （土曜日・日曜日・祝日 休業）
         p.l-footer-copy 
           | Copyright © Minami-Alps Mirai Foundation. All Rights Reserved.
 

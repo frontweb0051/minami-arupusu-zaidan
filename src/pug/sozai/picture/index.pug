@@ -13,6 +13,15 @@ append variables
   - var root_img_picture = root + "assets/img/sozai/picture/";
   - var root_link  = "../";
 
+//- CSS追加
+append css
+  link(rel="stylesheet" href=root + "assets/css/lib/luminous-basic.css")
+
+//- JS追加
+append js  
+  script(type="text/javascript" src=root + "assets/js/lib/luminous.min.js" defer)
+  script(src=root + "assets/js/picture.min.js" defer)
+
 //- コンテンツ
 block content
   .p-archive 
@@ -35,7 +44,8 @@ block content
                   p.p-picture-list__name 
                     | ハクサンイチゲ
                   .p-picture-list__image 
-                    img(src=root_img_picture + "spring-img01.jpg", alt="ハクサンイチゲの写真")
+                    a(href=root_img_picture + "spring-img01.jpg" class="luminous") 
+                      img(src=root_img_picture + "spring-img01.jpg", alt="ハクサンイチゲの写真")
                   .p-picture-list__download 
                     a(href="") Download
 
@@ -44,7 +54,8 @@ block content
                   p.p-picture-list__name 
                     | ミヤマキンバイ
                   .p-picture-list__image 
-                    img(src=root_img_picture + "spring-img02.jpg", alt="ミヤマキンバイの写真")
+                    a(href=root_img_picture + "spring-img02.jpg" class="luminous") 
+                      img(src=root_img_picture + "spring-img02.jpg", alt="ミヤマキンバイの写真")
                   .p-picture-list__download 
                     a(href="") Download
 

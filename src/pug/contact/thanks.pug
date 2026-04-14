@@ -1,0 +1,27 @@
+extend ../_include/_layout
+
+//- 設定の上書き
+append variables
+  //- Require
+  - var title = '';
+  - var site_name = '';
+  - var description = '';
+  - var slug = 'under'
+  //- Optional
+  - var root = "../";
+  - var root_img = root + "assets/img/";
+  - var root_link  = "../";
+
+//- コンテンツ
+block content
+  .p-contact  
+    .p-contact-content 
+      h1.p-contact-title
+        | お問い合わせ
+      p.p-contact-thanks
+        | この度は南アルプス未来財団へお問い合わせいただき、誠にありがとうございます。
+        br
+        | 本メールは【お問い合わせ受付完了】をお知らせする自動配信メールです。
+        br
+        | 後ほど、担当より改めてご連絡させていただきます。暫くお待ちください。
+

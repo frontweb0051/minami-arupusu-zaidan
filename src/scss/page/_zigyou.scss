@@ -1,0 +1,92 @@
+@use "../global" as g;
+
+/* ==========================================================================
+  zigyou
+========================================================================== */
+.p-zigyou {
+  
+  .p-zigyou-content {
+    margin-top: 70px;
+
+    @include g.mq(sm) {
+      margin-top: 40px;
+    }
+  }
+  .p-zigyou-box {
+
+    &+.p-zigyou-box {
+      margin-top: 100px;
+
+      @include g.mq(sm) {
+        margin-top: 50px;
+      }
+    }
+    .p-zigyou-box__title {
+      color: g.$col-green_00877B;
+      font-weight: 600;
+      text-align: center;
+      font-size: g.rem(22px);
+
+      @include g.mq(md) {
+        padding-bottom: 15px;
+        border-bottom: 3px solid g.$col-green_00877B;
+      }
+      @include g.mq(sm) {
+        font-size: g.rem(20px);
+      }
+    }
+    .p-zigyou-box__flex {
+      @include g.mq(md) {
+        display: flex;
+        column-gap: 28px;
+        margin-top: 33px;        
+      }
+      @include g.mq(sm) {
+        margin-top: 20px;
+      }
+    }
+    .p-zigyou-box__image {
+      @include g.mq(md) {        
+        flex: 0 0 513px;
+      }
+      @media screen and (min-width:767px) and (max-width:1240px) {
+        flex: 0 0 g.px2vw(513,1240);
+      }      
+    }
+    .p-zigyou-box__message {
+      @include g.mq(md) {        
+        flex: 0 1 100%;
+      }
+
+      dl {
+        @include g.mq(sm) {
+          margin-top: 20px;
+        }
+        dt {
+          font-weight: 600;
+          line-height: 1.75;
+          font-size: g.rem(20px);
+
+          @include g.mq(sm) {
+            font-size: g.rem(15px);
+          }
+        }
+        dd {
+          line-height: 1.94;
+          font-size: g.rem(18px);
+
+          @include g.mq(sm) {
+            font-size: g.rem(15px);
+          }
+        }
+        &+dl {
+          margin-top: 30px;
+
+          @include g.mq(sm) {
+            margin-top: 20px;
+          }
+        }
+      }
+    }
+  }
+}

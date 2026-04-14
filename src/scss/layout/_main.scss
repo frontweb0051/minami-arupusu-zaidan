@@ -4,7 +4,12 @@
    main
 ========================================================================== */
 main {
-  background-image: url('../img/cmn/main-bg01.png');
-  background-size: contain;
-  background-repeat: repeat;
+  position: relative;
+  // background-image: url('../img/cmn/main-bg01.png');
+  // background-size: contain;
+  // background-repeat: repeat;
+
+  @include g.mq(sm) {
+    padding-top: 45px;
+  }
 }

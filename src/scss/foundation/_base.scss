@@ -16,6 +16,7 @@
 }
 html {
 	font-size: g.get-scale("medium"); // デフォルト 100%
+  transition: all .3s;
 
   &.is-small {
     font-size: g.get-scale("small"); // 約 85.71%
@@ -40,11 +41,66 @@ body {
 	text-size-adjust: none;
 	-webkit-font-smoothing: antialiased;
   background-image: url('../img/cmn/main-bg01.png');
-  background-size: contain;
+  background-size: auto;
   background-repeat: repeat;
+}
+
+.l-base-bg {
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: url('../img/cmn/main-bg01.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    aspect-ratio: 1920/50000;
+    width: 100%;
+    z-index: -1;
+    
+    @include g.mq(sm) {
+      background-image: url('../img/cmn/sp/humberger-bg.png');      
+      aspect-ratio: 860/10000;
+    }
+  }
+}
+
+.c-skip-link {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  z-index: 1000;
+  padding: 10px 14px;
+  border: 2px solid #000;
+  background: #fff;
+  color: #000;
+  font-weight: 600;
+  font-size: g.rem(14px);
+  line-height: 1;
+  text-decoration: none;
+  transform: translateY(-200%);
+  transition: transform 0.2s ease;
+
+  &:focus,
+  &:focus-visible {
+    transform: translateY(0);
+  }
 }
 
 img {
 	vertical-align: middle;
 	width: 100%;
+  height: auto;
+}
+
+a {
+  transition: all .3s;
+
+  &:hover {
+    opacity: .8;
+  }
 }

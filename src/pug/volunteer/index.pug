@@ -1,0 +1,115 @@
+extend ../_include/_layout
+
+//- 設定の上書き
+append variables
+  //- Require
+  - var title = '';
+  - var site_name = '';
+  - var description = '';
+  - var slug = 'under'
+  //- Optional
+  - var root = "../";
+  - var root_img = root + "assets/img/";
+  - var root_link  = "../";
+
+//- コンテンツ
+block content
+  .p-contact  
+    .p-contact-content 
+      p.p-contact-strong 
+        | ・応募人数が定員数を超えた場合、誠に申し訳ありませんが、希望順位を考慮し、抽選等により決定させていただきます。（参加者の決定は、先着順ではありません。）
+        br
+        | ・応募の結果は、応募をいただいた方全員に連絡します。
+        br
+        | ・参加が決定した方には、応募結果のご案内とは別に、詳細な活動計画を後日送付いたします。
+      h1.p-contact-title
+        | お問い合わせ
+      form.p-contact-form(action="") 
+        .p-contact-item
+          label.p-contact-label(for="") 氏　名
+          .p-contact-box 
+            .p-contact-input.p-contact-input--herf
+              input(type="text", placeholder="例：南")
+            .p-contact-input.p-contact-input--herf
+              input(type="text", placeholder="例：太郎")
+        .p-contact-item
+          label.p-contact-label(for="") フリガナ
+          .p-contact-box 
+            .p-contact-input.p-contact-input--herf
+              input(type="text", placeholder="例：ミナミ")
+            .p-contact-input.p-contact-input--herf
+              input(type="text", placeholder="例：タロウ")
+
+        .p-contact-item
+          label.p-contact-label(for="") 生年月日
+          .p-contact-box 
+            .p-contact-input.p-contact-input--old
+              input(type="text", placeholder="例：ミナミ")
+              | 年
+            .p-contact-input.p-contact-input--old
+              input(type="text", placeholder="例：タロウ")
+              | 月
+            .p-contact-input.p-contact-input--old
+              input(type="text", placeholder="例：タロウ")
+              | 日
+        .p-contact-item
+          label.p-contact-label(for="") 性　別
+          .p-contact-box 
+            .p-contact-radio 
+              input(type="radio", name="radio01", id="radio-01")
+              label(for="radio-01") 男性
+            .p-contact-radio 
+              input(type="radio", name="radio01", id="radio-02")
+              label(for="radio-02") 女性
+        .p-contact-item
+          label.p-contact-label(for="") 住　所
+          .p-contact-box 
+            .p-contact-address 
+              .p-contact-input.p-contact-input--herf
+                input(type="text", placeholder="郵便番号（半角）")
+              .p-contact-select
+                select(name="") 
+                  option(value="選択してください") 選択してください
+              .p-contact-input
+                input(type="text", placeholder="市区町村名")
+              .p-contact-input(style="padding-top:0px;")
+                input(type="text", placeholder="字・番地・ビル名")
+        .p-contact-item
+          label.p-contact-label(for="") 活動申込
+          .p-contact-box.p-contact-box--column 
+            .p-contact-box__item                        
+              .p-contact-input.p-contact-input--herf
+                .p-contact-input__box 
+                  p.p-contact-text 
+                    | 活動場所              
+                  input(type="text")
+              .p-contact-input.p-contact-input--old 
+                .p-contact-input__box 
+                  p.p-contact-text 
+                    | 実施時期               
+                  input(type="text", placeholder="1")
+                span 月
+              .p-contact-input.p-contact-input--old          
+                .p-contact-input__box 
+                  p.p-contact-text 
+                    | 希望順位               
+                  input(type="text", placeholder="1")
+                span 位
+            .p-contact-box__item                        
+              .p-contact-input.p-contact-input--herf             
+                  input(type="text")
+              .p-contact-input.p-contact-input--old               
+                input(type="text", placeholder="1")
+                span 月
+              .p-contact-input.p-contact-input--old                       
+                input(type="text", placeholder="1")
+                span 位
+            .p-contact-box__item                        
+              .p-contact-input.p-contact-input--herf             
+                  input(type="text")
+              .p-contact-input.p-contact-input--old               
+                input(type="text", placeholder="1")
+                span 月
+              .p-contact-input.p-contact-input--old                       
+                input(type="text", placeholder="1")
+                span 位

@@ -1,20 +1,26 @@
 - var root_img = root + 'assets/img/';
 
 .l-sidebar 
+  .l-sidebar-entry
+    .l-sidebar-button.close 
+      span ボランティア活動参加
+    .l-sidebar-button 
+      a(href="") ご寄付のお願い
+    .l-sidebar-button 
+      a(href="") 会員登録
   .l-sidebar-contact 
     a(href="") 
       img(src=root_img + "cmn/contact-img01.png", alt="お問い合わせ画像")
       p.l-sidebar-contact__text 
         | お問い合わせ
-  .l-sidebar-entry
-    a(href="") 
-      img(src=root_img + "cmn/contact-img02.png", alt="各種お申し込み画像")
   ul.l-sidebar-sns 
-    li.l-sidebar-sns__insta 
+    li.l-sidebar-sns__insta(aria-hidden="true") 
       a(href="") 
         img(src=root_img + "cmn/instagram-icon01.png", alt="instagram")
-    li.l-sidebar-sns__insta 
+    li.l-sidebar-sns__insta(aria-hidden="true") 
       a(href="") 
         img(src=root_img + "cmn/facebook-icon01.png", alt="facebook")
+
+
 
 

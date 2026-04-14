@@ -1,0 +1,59 @@
+extend ../_include/_layout
+
+//- 設定の上書き
+append variables
+  //- Require
+  - var title = '';
+  - var site_name = '';
+  - var description = '';
+  - var slug = 'under'
+  //- Optional
+  - var root = "../";
+  - var root_img = root + "assets/img/";
+  - var root_link  = "../";
+
+//- コンテンツ
+block content
+  .p-contact  
+    .p-contact-content 
+      h1.p-contact-title
+        | お問い合わせ
+      form.p-contact-form(action="") 
+        .p-contact-form__content
+          .p-contact-item
+            label.p-contact-label(for="") 
+              | 氏　名
+              span.required 必須
+            .p-contact-box 
+              .p-contact-input.p-contact-input--herf
+                input(type="text", placeholder="例：南")
+              .p-contact-input.p-contact-input--herf
+                input(type="text", placeholder="例：太郎")
+          .p-contact-item
+            label.p-contact-label(for="") フリガナ
+            .p-contact-box 
+              .p-contact-input.p-contact-input--herf
+                input(type="text", placeholder="例：ミナミ")
+              .p-contact-input.p-contact-input--herf
+                input(type="text", placeholder="例：タロウ")
+          .p-contact-item
+            label.p-contact-label(for="") 電話番号
+            .p-contact-box 
+              .p-contact-input
+                input(type="tel")
+          .p-contact-item
+            label.p-contact-label(for="") メールアドレス
+            .p-contact-box 
+              .p-contact-input
+                input(type="mail", placeholder="例：info@×××.com（半角）")
+                p.p-contact-text
+                  | ※携帯メールアドレスへのご連絡をご希望の場合はPCメールを受信できる設定にするようにお願いします。
+          .p-contact-item
+            label.p-contact-label(for="") お問い合わせ内容
+            .p-contact-box 
+              .p-contact-input
+                textarea(name="") 
+          .p-contact-button 
+            input(type="submit", value="送信")
+
+
